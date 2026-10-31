@@ -1,0 +1,18 @@
+<template><style>
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope.woff2');font-weight:100 900}
+@font-face{font-family:'DM Sans';src:url('assets/fonts/dm-sans.woff2');font-weight:100 900}
+*{box-sizing:border-box}#root{position:absolute;inset:0;overflow:hidden;background:#f6f8fb;color:#18263a;font-family:'DM Sans'}
+.chapter{position:absolute;left:192px;top:110px;font-size:28px;font-weight:700;color:#116c4b;letter-spacing:1px}
+h1,p{margin:0}h1{font:800 64px/1.12 Manrope;letter-spacing:-2px}
+.title{position:absolute;left:192px;top:166px;width:1536px}.detail{position:absolute;left:192px;top:260px;width:1536px;font-size:32px;line-height:1.35;color:#42546c}
+.stage{position:absolute;left:192px;top:350px;width:1536px;height:580px;background:white;border:2px solid #d9e1eb;border-radius:20px;overflow:hidden}
+.bar{height:48px;background:#e7ebf1;color:#42546c;display:flex;align-items:center;gap:10px;padding:0 24px;font-size:28px}.bar i{width:10px;height:10px;background:#718096;border-radius:50%}.bar span{margin-left:24px}
+.surface{position:absolute;left:26px;right:26px;top:64px;bottom:20px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.surface img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.foot{position:absolute;left:192px;bottom:94px;font-size:28px;line-height:1.3;color:#52637a}
+.cue{position:absolute;right:36px;bottom:28px;background:#ddf5eb;color:#116c4b;border:2px solid #16865e;border-radius:12px;font-size:30px;font-weight:700;padding:15px 24px}
+.dark{background:#101b2d!important;color:#f6f8fb!important}.dark .chapter{color:#90e2bc}.dark .detail,.dark .foot{color:#b7c8d9}.dark h1{color:#f6f8fb}.accent{color:#90e2bc}
+.narrow .title{top:240px;width:760px;font-size:80px;line-height:1.16}.narrow .detail{top:540px;width:730px;font-size:34px;line-height:1.5}.narrow .stage{left:1128px;top:146px;width:570px;height:770px}.narrow .surface{inset:20px}.narrow .bar{display:none}
+.wide .stage{height:596px}.wide .surface{top:62px;bottom:18px}
+.notice-scene .stage{height:570px;background:#fff}.notice-scene .surface{align-items:flex-start;top:240px}.notice-scene .surface img{width:100%;max-height:160px}.notice-scene .summary{position:absolute;left:40px;right:40px;top:108px;font:800 44px/1.2 Manrope;color:#18263a}.notice-scene .cue{bottom:44px}
+</style><div id="root" data-composition-id="slots" data-width="1920" data-height="1080"><div class="wide" style="position:absolute;inset:0"><div class="chapter">Patient workflow</div><h1 class="title" data-var-text="slots-title">Choose a date and time</h1><p class="detail">The date selector follows the doctor&#x27;s calendar</p><div class="stage" data-hold="true"><div class="bar"><i></i><i></i><i></i><span>SlotZero · Patient workflow</span></div><div class="surface"><img src="assets/slots.png" alt="Actual SlotZero slots screen"></div></div><div class="foot">Actual SlotZero interface · isolated fictional-data demonstration</div></div></div><script>const D=10.668;const tl=gsap.timeline({paused:true});tl.fromTo('.stage',{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:'power3.out'},.06);window.__timelines=window.__timelines||{};window.__timelines['slots']=tl;</script></template>

@@ -4,6 +4,14 @@
 
 Tell one short story that proves SlotZero solves the challenge: a doctor configures availability, a patient books, the doctor sees the same booking, a competing patient cannot double-book, and the booking can be safely changed. Include timezone handling.
 
+### Delivered narrated walkthrough — 2026-10-31
+
+A separate [2 minute 51 second workflow pitch](../../brag-output/voiceover/slotzero-workflow-voiceover.mp4) now covers sign-in/registration, doctor hours and blocked time, patient discovery and booking, dual-zone display, doctor confirmation, a rejected competing request, safe rescheduling, cancellation, slot release and history. It uses Aditya's Indian English voice through the user's connected HeyGen account, with background music beneath the narration. The existing 25-second launch film is preserved.
+
+The walkthrough uses actual locally rendered templates with fictional state, not an uninterrupted recording of the public deployment. The disposable fixture asserted the demonstrated lifecycle and exactly one confirmation after sequential competing requests. HyperFrames checks passed with zero errors/warnings; the final 1920×1080 H.264/AAC file fully decoded and its audio peaked at −3.2 dB. This task did not rerun public-deployment concurrency/persistence tests or provide a subjective listening review.
+
+See the [media handoff and verification](../../brag-output/voiceover/README.md), [script](../../brag-output/voiceover/narration.md) and [music credit](../../brag-output/voiceover/CREDITS.md). Review with sound before sharing. No public upload or submission was made.
+
 ## 2. Suggested 2–3 minute demo script
 
 > **0:00–0:15 — Problem and product**  

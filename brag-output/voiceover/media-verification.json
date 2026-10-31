@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "duration": 171.134,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "frames": 5134,
+  "fps": 30,
+  "mean_db": -19.9,
+  "peak_db": -3.2,
+  "bytes": 9700028,
+  "full_decode": "passed",
+  "subjective_listening": "not performed",
+  "frames_extracted_at_seconds": [
+    7,
+    34,
+    66,
+    86,
+    108,
+    120,
+    139,
+    165
+  ]
+}

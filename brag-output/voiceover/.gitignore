@@ -1,0 +1,6 @@
+.render-tmp/
+review-frames/
+composition/.hyperframes/
+composition/.thumbnails/
+composition/.waveform-cache/
+composition/renders/

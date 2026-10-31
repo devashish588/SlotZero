@@ -1,0 +1,1254 @@
+{
+  "ok": true,
+  "outputDir": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames",
+  "frames": [
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-01-at-0.3s.png",
+      "time": 0.3,
+      "role": "beat",
+      "label": "scene-problem"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-02-at-5.16s.png",
+      "time": 5.16,
+      "role": "beat",
+      "label": "scene-problem mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-03-at-10.619s.png",
+      "time": 10.619,
+      "role": "beat",
+      "label": "scene-signin"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-04-at-14.478s.png",
+      "time": 14.478,
+      "role": "beat",
+      "label": "scene-signin mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-05-at-18.936s.png",
+      "time": 18.936,
+      "role": "beat",
+      "label": "scene-register"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-06-at-23.302s.png",
+      "time": 23.302,
+      "role": "beat",
+      "label": "scene-register mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-07-at-28.268s.png",
+      "time": 28.268,
+      "role": "beat",
+      "label": "scene-schedule"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-08-at-33.546s.png",
+      "time": 33.546,
+      "role": "beat",
+      "label": "scene-schedule mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-09-at-39.424s.png",
+      "time": 39.424,
+      "role": "beat",
+      "label": "scene-blocks"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-10-at-44.25s.png",
+      "time": 44.25,
+      "role": "beat",
+      "label": "scene-blocks mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-11-at-49.675s.png",
+      "time": 49.675,
+      "role": "beat",
+      "label": "scene-discover"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-12-at-54.951s.png",
+      "time": 54.951,
+      "role": "beat",
+      "label": "scene-discover mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-13-at-60.826s.png",
+      "time": 60.826,
+      "role": "beat",
+      "label": "scene-slots"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-14-at-65.86s.png",
+      "time": 65.86,
+      "role": "beat",
+      "label": "scene-slots mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-15-at-71.494s.png",
+      "time": 71.494,
+      "role": "beat",
+      "label": "scene-zones"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-16-at-76.15s.png",
+      "time": 76.15,
+      "role": "beat",
+      "label": "scene-zones mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-17-at-81.406s.png",
+      "time": 81.406,
+      "role": "beat",
+      "label": "scene-book"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-18-at-86.292s.png",
+      "time": 86.292,
+      "role": "beat",
+      "label": "scene-book mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-19-at-91.779s.png",
+      "time": 91.779,
+      "role": "beat",
+      "label": "scene-calendar"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-20-at-96.906s.png",
+      "time": 96.906,
+      "role": "beat",
+      "label": "scene-calendar mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-21-at-102.633s.png",
+      "time": 102.633,
+      "role": "beat",
+      "label": "scene-conflict"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-22-at-108.42s.png",
+      "time": 108.42,
+      "role": "beat",
+      "label": "scene-conflict mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-23-at-114.806s.png",
+      "time": 114.806,
+      "role": "beat",
+      "label": "scene-reschedule"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-24-at-119.78s.png",
+      "time": 119.78,
+      "role": "beat",
+      "label": "scene-reschedule mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-25-at-125.353s.png",
+      "time": 125.353,
+      "role": "beat",
+      "label": "scene-moved"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-26-at-129.161s.png",
+      "time": 129.161,
+      "role": "beat",
+      "label": "scene-moved mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-27-at-133.568s.png",
+      "time": 133.568,
+      "role": "beat",
+      "label": "scene-cancel"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-28-at-138.907s.png",
+      "time": 138.907,
+      "role": "beat",
+      "label": "scene-cancel mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-29-at-144.845s.png",
+      "time": 144.845,
+      "role": "beat",
+      "label": "scene-history"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-30-at-149.043s.png",
+      "time": 149.043,
+      "role": "beat",
+      "label": "scene-history mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-31-at-153.84s.png",
+      "time": 153.84,
+      "role": "beat",
+      "label": "scene-close"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-32-at-162.322s.png",
+      "time": 162.322,
+      "role": "beat",
+      "label": "scene-close mid"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-1-at-10.119s.png",
+      "time": 10.119,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-2-at-10.219s.png",
+      "time": 10.219,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-3-at-10.319s.png",
+      "time": 10.319,
+      "role": "seam",
+      "label": "cut scene-problem -> scene-signin"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-4-at-10.419s.png",
+      "time": 10.419,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-5-at-10.519s.png",
+      "time": 10.519,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-1-at-18.436s.png",
+      "time": 18.436,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-2-at-18.536s.png",
+      "time": 18.536,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-3-at-18.636s.png",
+      "time": 18.636,
+      "role": "seam",
+      "label": "cut scene-signin -> scene-register"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-4-at-18.736s.png",
+      "time": 18.736,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-5-at-18.836s.png",
+      "time": 18.836,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-1-at-27.768s.png",
+      "time": 27.768,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-2-at-27.868s.png",
+      "time": 27.868,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-3-at-27.968s.png",
+      "time": 27.968,
+      "role": "seam",
+      "label": "cut scene-register -> scene-schedule"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-4-at-28.068s.png",
+      "time": 28.068,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-5-at-28.168s.png",
+      "time": 28.168,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-1-at-38.924s.png",
+      "time": 38.924,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-2-at-39.024s.png",
+      "time": 39.024,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-3-at-39.124s.png",
+      "time": 39.124,
+      "role": "seam",
+      "label": "cut scene-schedule -> scene-blocks"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-4-at-39.224s.png",
+      "time": 39.224,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-5-at-39.324s.png",
+      "time": 39.324,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-1-at-49.175s.png",
+      "time": 49.175,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-2-at-49.275s.png",
+      "time": 49.275,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-3-at-49.375s.png",
+      "time": 49.375,
+      "role": "seam",
+      "label": "cut scene-blocks -> scene-discover"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-4-at-49.475s.png",
+      "time": 49.475,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-5-at-49.575s.png",
+      "time": 49.575,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-1-at-60.326s.png",
+      "time": 60.326,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-2-at-60.426s.png",
+      "time": 60.426,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-3-at-60.526s.png",
+      "time": 60.526,
+      "role": "seam",
+      "label": "cut scene-discover -> scene-slots"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-4-at-60.626s.png",
+      "time": 60.626,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-5-at-60.726s.png",
+      "time": 60.726,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-1-at-70.994s.png",
+      "time": 70.994,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-2-at-71.094s.png",
+      "time": 71.094,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-3-at-71.194s.png",
+      "time": 71.194,
+      "role": "seam",
+      "label": "cut scene-slots -> scene-zones"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-4-at-71.294s.png",
+      "time": 71.294,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-5-at-71.394s.png",
+      "time": 71.394,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-1-at-80.906s.png",
+      "time": 80.906,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-2-at-81.006s.png",
+      "time": 81.006,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-3-at-81.106s.png",
+      "time": 81.106,
+      "role": "seam",
+      "label": "cut scene-zones -> scene-book"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-4-at-81.206s.png",
+      "time": 81.206,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-5-at-81.306s.png",
+      "time": 81.306,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-1-at-91.279s.png",
+      "time": 91.279,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-2-at-91.379s.png",
+      "time": 91.379,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-3-at-91.479s.png",
+      "time": 91.479,
+      "role": "seam",
+      "label": "cut scene-book -> scene-calendar"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-4-at-91.579s.png",
+      "time": 91.579,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-5-at-91.679s.png",
+      "time": 91.679,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-1-at-102.133s.png",
+      "time": 102.133,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-2-at-102.233s.png",
+      "time": 102.233,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-3-at-102.333s.png",
+      "time": 102.333,
+      "role": "seam",
+      "label": "cut scene-calendar -> scene-conflict"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-4-at-102.433s.png",
+      "time": 102.433,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-5-at-102.533s.png",
+      "time": 102.533,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-1-at-114.306s.png",
+      "time": 114.306,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-2-at-114.406s.png",
+      "time": 114.406,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-3-at-114.506s.png",
+      "time": 114.506,
+      "role": "seam",
+      "label": "cut scene-conflict -> scene-reschedule"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-4-at-114.606s.png",
+      "time": 114.606,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-5-at-114.706s.png",
+      "time": 114.706,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-1-at-124.853s.png",
+      "time": 124.853,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-2-at-124.953s.png",
+      "time": 124.953,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-3-at-125.053s.png",
+      "time": 125.053,
+      "role": "seam",
+      "label": "cut scene-reschedule -> scene-moved"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-4-at-125.153s.png",
+      "time": 125.153,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-5-at-125.253s.png",
+      "time": 125.253,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-1-at-133.068s.png",
+      "time": 133.068,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-2-at-133.168s.png",
+      "time": 133.168,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-3-at-133.268s.png",
+      "time": 133.268,
+      "role": "seam",
+      "label": "cut scene-moved -> scene-cancel"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-4-at-133.368s.png",
+      "time": 133.368,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-5-at-133.468s.png",
+      "time": 133.468,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-1-at-144.345s.png",
+      "time": 144.345,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-2-at-144.445s.png",
+      "time": 144.445,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-3-at-144.545s.png",
+      "time": 144.545,
+      "role": "seam",
+      "label": "cut scene-cancel -> scene-history"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-4-at-144.645s.png",
+      "time": 144.645,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-5-at-144.745s.png",
+      "time": 144.745,
+      "role": "seam",
+      "label": "+0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-1-at-153.34s.png",
+      "time": 153.34,
+      "role": "seam",
+      "label": "cut -0.2"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-2-at-153.44s.png",
+      "time": 153.44,
+      "role": "seam",
+      "label": "-0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-3-at-153.54s.png",
+      "time": 153.54,
+      "role": "seam",
+      "label": "cut scene-history -> scene-close"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-4-at-153.64s.png",
+      "time": 153.64,
+      "role": "seam",
+      "label": "+0.1"
+    },
+    {
+      "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-5-at-153.74s.png",
+      "time": 153.74,
+      "role": "seam",
+      "label": "+0.2"
+    }
+  ],
+  "contactSheets": [
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-beats-1.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-beats-2.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-01.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-02.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-03.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-04.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-05.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-06.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-07.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-08.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-09.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-10.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-11.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-12.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-13.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-14.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-15.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-phone-1.jpg",
+    "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-phone-2.jpg"
+  ],
+  "review": {
+    "window": [
+      0,
+      171.103
+    ],
+    "scenes": [
+      {
+        "id": "scene-problem",
+        "start": 0,
+        "end": 10.319
+      },
+      {
+        "id": "scene-signin",
+        "start": 10.319,
+        "end": 18.636
+      },
+      {
+        "id": "scene-register",
+        "start": 18.636,
+        "end": 27.968
+      },
+      {
+        "id": "scene-schedule",
+        "start": 27.968,
+        "end": 39.124
+      },
+      {
+        "id": "scene-blocks",
+        "start": 39.124,
+        "end": 49.375
+      },
+      {
+        "id": "scene-discover",
+        "start": 49.375,
+        "end": 60.526
+      },
+      {
+        "id": "scene-slots",
+        "start": 60.526,
+        "end": 71.194
+      },
+      {
+        "id": "scene-zones",
+        "start": 71.194,
+        "end": 81.106
+      },
+      {
+        "id": "scene-book",
+        "start": 81.106,
+        "end": 91.479
+      },
+      {
+        "id": "scene-calendar",
+        "start": 91.479,
+        "end": 102.333
+      },
+      {
+        "id": "scene-conflict",
+        "start": 102.333,
+        "end": 114.506
+      },
+      {
+        "id": "scene-reschedule",
+        "start": 114.506,
+        "end": 125.053
+      },
+      {
+        "id": "scene-moved",
+        "start": 125.053,
+        "end": 133.268
+      },
+      {
+        "id": "scene-cancel",
+        "start": 133.268,
+        "end": 144.545
+      },
+      {
+        "id": "scene-history",
+        "start": 144.545,
+        "end": 153.54
+      },
+      {
+        "id": "scene-close",
+        "start": 153.54,
+        "end": 171.103
+      }
+    ],
+    "beats": [
+      {
+        "time": 0.3,
+        "label": "scene-problem",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-01-at-0.3s.png"
+      },
+      {
+        "time": 5.16,
+        "label": "scene-problem mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-02-at-5.16s.png"
+      },
+      {
+        "time": 10.619,
+        "label": "scene-signin",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-03-at-10.619s.png"
+      },
+      {
+        "time": 14.478,
+        "label": "scene-signin mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-04-at-14.478s.png"
+      },
+      {
+        "time": 18.936,
+        "label": "scene-register",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-05-at-18.936s.png"
+      },
+      {
+        "time": 23.302,
+        "label": "scene-register mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-06-at-23.302s.png"
+      },
+      {
+        "time": 28.268,
+        "label": "scene-schedule",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-07-at-28.268s.png"
+      },
+      {
+        "time": 33.546,
+        "label": "scene-schedule mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-08-at-33.546s.png"
+      },
+      {
+        "time": 39.424,
+        "label": "scene-blocks",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-09-at-39.424s.png"
+      },
+      {
+        "time": 44.25,
+        "label": "scene-blocks mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-10-at-44.25s.png"
+      },
+      {
+        "time": 49.675,
+        "label": "scene-discover",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-11-at-49.675s.png"
+      },
+      {
+        "time": 54.951,
+        "label": "scene-discover mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-12-at-54.951s.png"
+      },
+      {
+        "time": 60.826,
+        "label": "scene-slots",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-13-at-60.826s.png"
+      },
+      {
+        "time": 65.86,
+        "label": "scene-slots mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-14-at-65.86s.png"
+      },
+      {
+        "time": 71.494,
+        "label": "scene-zones",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-15-at-71.494s.png"
+      },
+      {
+        "time": 76.15,
+        "label": "scene-zones mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-16-at-76.15s.png"
+      },
+      {
+        "time": 81.406,
+        "label": "scene-book",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-17-at-81.406s.png"
+      },
+      {
+        "time": 86.292,
+        "label": "scene-book mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-18-at-86.292s.png"
+      },
+      {
+        "time": 91.779,
+        "label": "scene-calendar",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-19-at-91.779s.png"
+      },
+      {
+        "time": 96.906,
+        "label": "scene-calendar mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-20-at-96.906s.png"
+      },
+      {
+        "time": 102.633,
+        "label": "scene-conflict",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-21-at-102.633s.png"
+      },
+      {
+        "time": 108.42,
+        "label": "scene-conflict mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-22-at-108.42s.png"
+      },
+      {
+        "time": 114.806,
+        "label": "scene-reschedule",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-23-at-114.806s.png"
+      },
+      {
+        "time": 119.78,
+        "label": "scene-reschedule mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-24-at-119.78s.png"
+      },
+      {
+        "time": 125.353,
+        "label": "scene-moved",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-25-at-125.353s.png"
+      },
+      {
+        "time": 129.161,
+        "label": "scene-moved mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-26-at-129.161s.png"
+      },
+      {
+        "time": 133.568,
+        "label": "scene-cancel",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-27-at-133.568s.png"
+      },
+      {
+        "time": 138.907,
+        "label": "scene-cancel mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-28-at-138.907s.png"
+      },
+      {
+        "time": 144.845,
+        "label": "scene-history",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-29-at-144.845s.png"
+      },
+      {
+        "time": 149.043,
+        "label": "scene-history mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-30-at-149.043s.png"
+      },
+      {
+        "time": 153.84,
+        "label": "scene-close",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-31-at-153.84s.png"
+      },
+      {
+        "time": 162.322,
+        "label": "scene-close mid",
+        "path": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\beat-32-at-162.322s.png"
+      }
+    ],
+    "seams": [
+      {
+        "time": 10.319,
+        "from": "scene-problem",
+        "to": "scene-signin",
+        "times": [
+          10.119,
+          10.219,
+          10.319,
+          10.419,
+          10.519
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-1-at-10.119s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-2-at-10.219s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-3-at-10.319s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-4-at-10.419s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-01-5-at-10.519s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-01.jpg"
+      },
+      {
+        "time": 18.636,
+        "from": "scene-signin",
+        "to": "scene-register",
+        "times": [
+          18.436,
+          18.536,
+          18.636,
+          18.736,
+          18.836
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-1-at-18.436s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-2-at-18.536s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-3-at-18.636s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-4-at-18.736s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-02-5-at-18.836s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-02.jpg"
+      },
+      {
+        "time": 27.968,
+        "from": "scene-register",
+        "to": "scene-schedule",
+        "times": [
+          27.768,
+          27.868,
+          27.968,
+          28.068,
+          28.168
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-1-at-27.768s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-2-at-27.868s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-3-at-27.968s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-4-at-28.068s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-03-5-at-28.168s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-03.jpg"
+      },
+      {
+        "time": 39.124,
+        "from": "scene-schedule",
+        "to": "scene-blocks",
+        "times": [
+          38.924,
+          39.024,
+          39.124,
+          39.224,
+          39.324
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-1-at-38.924s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-2-at-39.024s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-3-at-39.124s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-4-at-39.224s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-04-5-at-39.324s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-04.jpg"
+      },
+      {
+        "time": 49.375,
+        "from": "scene-blocks",
+        "to": "scene-discover",
+        "times": [
+          49.175,
+          49.275,
+          49.375,
+          49.475,
+          49.575
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-1-at-49.175s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-2-at-49.275s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-3-at-49.375s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-4-at-49.475s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-05-5-at-49.575s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-05.jpg"
+      },
+      {
+        "time": 60.526,
+        "from": "scene-discover",
+        "to": "scene-slots",
+        "times": [
+          60.326,
+          60.426,
+          60.526,
+          60.626,
+          60.726
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-1-at-60.326s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-2-at-60.426s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-3-at-60.526s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-4-at-60.626s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-06-5-at-60.726s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-06.jpg"
+      },
+      {
+        "time": 71.194,
+        "from": "scene-slots",
+        "to": "scene-zones",
+        "times": [
+          70.994,
+          71.094,
+          71.194,
+          71.294,
+          71.394
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-1-at-70.994s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-2-at-71.094s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-3-at-71.194s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-4-at-71.294s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-07-5-at-71.394s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-07.jpg"
+      },
+      {
+        "time": 81.106,
+        "from": "scene-zones",
+        "to": "scene-book",
+        "times": [
+          80.906,
+          81.006,
+          81.106,
+          81.206,
+          81.306
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-1-at-80.906s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-2-at-81.006s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-3-at-81.106s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-4-at-81.206s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-08-5-at-81.306s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-08.jpg"
+      },
+      {
+        "time": 91.479,
+        "from": "scene-book",
+        "to": "scene-calendar",
+        "times": [
+          91.279,
+          91.379,
+          91.479,
+          91.579,
+          91.679
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-1-at-91.279s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-2-at-91.379s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-3-at-91.479s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-4-at-91.579s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-09-5-at-91.679s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-09.jpg"
+      },
+      {
+        "time": 102.333,
+        "from": "scene-calendar",
+        "to": "scene-conflict",
+        "times": [
+          102.133,
+          102.233,
+          102.333,
+          102.433,
+          102.533
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-1-at-102.133s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-2-at-102.233s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-3-at-102.333s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-4-at-102.433s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-10-5-at-102.533s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-10.jpg"
+      },
+      {
+        "time": 114.506,
+        "from": "scene-conflict",
+        "to": "scene-reschedule",
+        "times": [
+          114.306,
+          114.406,
+          114.506,
+          114.606,
+          114.706
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-1-at-114.306s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-2-at-114.406s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-3-at-114.506s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-4-at-114.606s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-11-5-at-114.706s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-11.jpg"
+      },
+      {
+        "time": 125.053,
+        "from": "scene-reschedule",
+        "to": "scene-moved",
+        "times": [
+          124.853,
+          124.953,
+          125.053,
+          125.153,
+          125.253
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-1-at-124.853s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-2-at-124.953s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-3-at-125.053s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-4-at-125.153s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-12-5-at-125.253s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-12.jpg"
+      },
+      {
+        "time": 133.268,
+        "from": "scene-moved",
+        "to": "scene-cancel",
+        "times": [
+          133.068,
+          133.168,
+          133.268,
+          133.368,
+          133.468
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-1-at-133.068s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-2-at-133.168s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-3-at-133.268s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-4-at-133.368s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-13-5-at-133.468s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-13.jpg"
+      },
+      {
+        "time": 144.545,
+        "from": "scene-cancel",
+        "to": "scene-history",
+        "times": [
+          144.345,
+          144.445,
+          144.545,
+          144.645,
+          144.745
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-1-at-144.345s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-2-at-144.445s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-3-at-144.545s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-4-at-144.645s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-14-5-at-144.745s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-14.jpg"
+      },
+      {
+        "time": 153.54,
+        "from": "scene-history",
+        "to": "scene-close",
+        "times": [
+          153.34,
+          153.44,
+          153.54,
+          153.64,
+          153.74
+        ],
+        "paths": [
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-1-at-153.34s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-2-at-153.44s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-3-at-153.54s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-4-at-153.64s.png",
+          "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\seam-15-5-at-153.74s.png"
+        ],
+        "sheet": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-15.jpg"
+      }
+    ],
+    "sheets": {
+      "beats": [
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-beats-1.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-beats-2.jpg"
+      ],
+      "seams": [
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-01.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-02.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-03.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-04.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-05.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-06.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-07.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-08.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-09.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-10.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-11.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-12.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-13.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-14.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-seam-15.jpg"
+      ],
+      "phone": [
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-phone-1.jpg",
+        "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\review-frames\\review-phone-2.jpg"
+      ]
+    },
+    "notes": []
+  },
+  "_meta": {
+    "version": "0.8.223",
+    "latestVersion": "0.8.223",
+    "updateAvailable": false
+  }
+}

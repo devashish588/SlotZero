@@ -1,0 +1,15 @@
+{
+  "source": "Current SlotZero templates",
+  "data": "Fictional demo accounts in disposable SQLite database",
+  "example_day": "2026-11-02",
+  "production_writes": false,
+  "checks": [
+    "Weekly split shifts, 30-minute slots and dated block applied; lunch and blocked times excluded",
+    "Asha confirmed at 10:00 UTC; Sam's later request for the identical slot rejected; exactly one confirmed row",
+    "Doctor block overlapping Asha's confirmed booking rejected",
+    "Failed move preserved original; successful move to 11:00 UTC released 10:00 UTC",
+    "Patient display-zone change preserved appointment's UTC instant",
+    "Eligible cancellation released 11:00 UTC; history contains booked, rescheduled and cancelled events"
+  ],
+  "temporary_database_removed": true
+}

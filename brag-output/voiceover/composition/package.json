@@ -1,0 +1,9 @@
+{
+  "name": "slotzero-narrated-workflow",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.223 preview --background",
+    "check": "npx --yes hyperframes@0.8.223 check",
+    "render": "npx --yes hyperframes@0.8.223 render --quality delivery --workers 1 --output ../slotzero-workflow-voiceover.mp4"
+  }
+}

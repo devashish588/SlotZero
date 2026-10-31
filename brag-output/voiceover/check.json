@@ -1,0 +1,108 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 17
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 171.103,
+    "samples": [
+      9.506,
+      28.517,
+      47.529,
+      66.54,
+      85.552,
+      104.563,
+      123.574,
+      142.586,
+      161.597
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      9.506,
+      47.529,
+      85.552,
+      123.574,
+      161.597
+    ],
+    "checked": 28,
+    "passed": 28
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.28600000000000136,
+    "samples": 599
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "ff6e5496-d544-4a83-81a6-1a08cea1cc1f",
+    "revision": "8a65ac36-a6a1-4245-9328-94380b6e7ca4",
+    "report": "D:\\Ai course\\Projects\\MedaVida project\\brag-output\\voiceover\\composition\\.hyperframes\\artifacts\\checks\\ff6e5496-d544-4a83-81a6-1a08cea1cc1f.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.8.223",
+    "latestVersion": "0.8.223",
+    "updateAvailable": false
+  }
+}
