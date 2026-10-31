@@ -1,3 +1,5 @@
+> **Legacy reference:** historical Next.js / `medavida-web` specification. The current FastAPI/Jinja2 application does not implement this automatically.
+
 # MedaVida — Auth & Dashboard Implementation Spec
 
 > Source of truth for visual rules: `design-system/medavida/MASTER.md`

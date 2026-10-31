@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Reschedule appointment{% endblock %}
+{% block breadcrumb %}My appointments / Reschedule{% endblock %}
+{% block content %}
+<a class="back-link" href="/patient/dashboard#appointments">← Back to my appointments</a>
+<section class="reschedule-header"><div class="eyebrow"><span></span> CHANGE YOUR APPOINTMENT</div><h1>Find a new time<span class="text-accent">.</span></h1><p class="muted">Your current appointment with {{ appointment.doctor_name }} stays confirmed unless a new time is successfully saved.</p><div class="current-booking"><span>YOUR CURRENT BOOKING</span><strong>{{ appointment.start_display }} – {{ appointment.end_display }} · {{ user.timezone }}</strong><small>{{ appointment.doctor_name }} · {{ appointment.specialization }}</small></div></section>
+<section class="booking-layout reschedule-layout">
+  <div class="booking-main-card"><div class="section-heading compact-heading"><div><div class="eyebrow"><span></span> AVAILABLE TIMES</div><h2>Choose a replacement</h2></div></div>
+    <form method="get" class="date-selector"><label for="reschedule-date">Doctor's calendar date</label><div><input id="reschedule-date" type="date" name="date" value="{{ selected_day }}" required><button class="button dark" type="submit">Show availability</button></div></form>
+    <div class="timezone-note"><span>◷</span><div><strong>Times shown in your local time</strong><small>{{ user.timezone }} · Doctor: {{ appointment.doctor_timezone }}</small></div></div>
+    {% if slots %}<div class="slot-list">{% for slot in slots %}<form method="post" action="/appointments/{{ appointment.id }}/reschedule" class="slot-card-form" data-confirm="Move this appointment to the selected time?"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><input type="hidden" name="slot_start" value="{{ slot.start_utc }}"><div class="slot-times"><strong>{{ slot.patient_time }}</strong><span>Your local time</span><small>{{ slot.doctor_time }} · {{ appointment.doctor_timezone }}</small></div><button class="button slot-book" type="submit">Select <span>→</span></button></form>{% endfor %}</div>{% else %}<div class="empty-state small-empty"><div class="empty-icon">◷</div><h3>No replacement slots on this date</h3><p>Choose another date. Your current booking remains unchanged.</p></div>{% endif %}
+  </div>
+</section>
+{% endblock %}

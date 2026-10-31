@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Book {{ doctor.full_name }}{% endblock %}
+{% block breadcrumb %}Find a doctor / {{ doctor.full_name }}{% endblock %}
+{% block content %}
+<a class="back-link" href="/patient/dashboard">← Back to doctors</a>
+<section class="doctor-profile-hero">
+  <div class="doctor-avatar large-avatar avatar-2">{{ doctor.full_name.split(' ')[1][:1] }}</div>
+  <div class="profile-title"><div class="eyebrow"><span></span> DOCTOR PROFILE</div><h1>{{ doctor.full_name }}</h1><p>{{ doctor.specialization }} · {{ doctor.timezone }}</p><span class="profile-bio">{{ doctor.bio }}</span></div>
+  <div class="profile-duration"><strong>{{ doctor.consultation_minutes }} min</strong><small>CONSULTATION</small></div>
+</section>
+<section class="booking-layout">
+  <div class="booking-main-card">
+    <div class="section-heading compact-heading"><div><div class="eyebrow"><span></span> LIVE AVAILABILITY</div><h2>Choose a time</h2><p class="muted">Select a date on the doctor's calendar. Available slots are refreshed from the live schedule.</p></div></div>
+    <form method="get" class="date-selector"><label for="booking-date">Doctor's calendar date</label><div><input id="booking-date" type="date" name="date" value="{{ selected_day }}" required><button class="button dark" type="submit">Show availability</button></div></form>
+    <div class="timezone-note"><span>◷</span><div><strong>Times shown in two time zones</strong><small>Doctor: {{ doctor.timezone }} · You: {{ user.timezone }}</small></div></div>
+    {% if slots %}
+      <div class="slot-list">
+        {% for slot in slots %}
+        <form method="post" action="/appointments/book" class="slot-card-form" data-confirm="Confirm this appointment?">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}"><input type="hidden" name="doctor_id" value="{{ doctor.id }}"><input type="hidden" name="slot_start" value="{{ slot.start_utc }}"><input type="hidden" name="idempotency_key" value="{{ range(100000000,999999999)|random }}-{{ loop.index }}-{{ doctor.id }}-{{ selected_day }}">
+          <div class="slot-times"><strong>{{ slot.patient_time }}</strong><span>Your local time</span><small>{{ slot.doctor_time }} · {{ doctor.timezone }}</small></div>
+          <button class="button slot-book" type="submit">Book <span>→</span></button>
+        </form>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state small-empty"><div class="empty-icon">◷</div><h3>No open times on this date</h3><p>{{ empty_message }}</p></div>
+    {% endif %}
+  </div>
+  <aside class="booking-side-card"><div class="side-icon">✳</div><h3>Booking with confidence</h3><ul><li><span>✓</span> Secure, server-verified booking</li><li><span>✓</span> Your local time is displayed</li><li><span>✓</span> Cancel up to 2 hours before</li><li><span>✓</span> Reschedule while eligible</li></ul><div class="side-divider"></div><small>Appointments are confirmed only after the slot is checked again by the scheduling engine.</small></aside>
+</section>
+{% endblock %}

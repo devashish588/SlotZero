@@ -35,3 +35,23 @@ Thumbs.db
 
 # Local-only preferences
 .impeccable/config.local.json
+
+# Runtime data, coverage, archives and local tooling
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.zip
+*.bak
+*.temp
+.idea/
+.opencode/node_modules/
