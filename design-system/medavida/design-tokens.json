@@ -1,0 +1,126 @@
+{
+  "$schema": "https://design-tokens.org/schema.json",
+  "meta": {
+    "project": "MedaVida",
+    "source": "design-system/medavida/MASTER.md",
+    "style": "Accessible & Ethical on Minimalism/Swiss base",
+    "note": "Implemented in medavida-web/src/app/globals.css (three layers: primitives → semantic → @theme map)"
+  },
+  "primitive": {
+    "color": {
+      "teal": {
+        "50": { "$value": "#F0FDFA", "$type": "color" },
+        "100": { "$value": "#CCFBF1", "$type": "color" },
+        "200": { "$value": "#99F6E4", "$type": "color" },
+        "300": { "$value": "#5EEAD4", "$type": "color" },
+        "400": { "$value": "#2DD4BF", "$type": "color" },
+        "500": { "$value": "#14B8A6", "$type": "color" },
+        "600": { "$value": "#0D9488", "$type": "color" },
+        "700": { "$value": "#0F766E", "$type": "color" },
+        "800": { "$value": "#115E59", "$type": "color" },
+        "900": { "$value": "#134E4A", "$type": "color" },
+        "950": { "$value": "#042F2E", "$type": "color" }
+      },
+      "cyan": {
+        "100": { "$value": "#CFFAFE", "$type": "color" },
+        "200": { "$value": "#A5F3FC", "$type": "color" },
+        "300": { "$value": "#67E8F9", "$type": "color" },
+        "400": { "$value": "#22D3EE", "$type": "color" },
+        "500": { "$value": "#06B6D4", "$type": "color" },
+        "600": { "$value": "#0891B2", "$type": "color" },
+        "700": { "$value": "#0E7490", "$type": "color" },
+        "800": { "$value": "#155E75", "$type": "color" },
+        "900": { "$value": "#164E63", "$type": "color" }
+      },
+      "green": {
+        "400": { "$value": "#4ADE80", "$type": "color" },
+        "500": { "$value": "#22C55E", "$type": "color" },
+        "600": { "$value": "#16A34A", "$type": "color" },
+        "700": { "$value": "#15803D", "$type": "color" }
+      },
+      "amber": {
+        "400": { "$value": "#FBBF24", "$type": "color" },
+        "500": { "$value": "#F59E0B", "$type": "color" },
+        "700": { "$value": "#B45309", "$type": "color" }
+      },
+      "slate": {
+        "100": { "$value": "#F1F5F9", "$type": "color" },
+        "200": { "$value": "#E2E8F0", "$type": "color" },
+        "300": { "$value": "#CBD5E1", "$type": "color" },
+        "400": { "$value": "#94A3B8", "$type": "color" },
+        "500": { "$value": "#64748B", "$type": "color" },
+        "600": { "$value": "#475569", "$type": "color" },
+        "700": { "$value": "#334155", "$type": "color" },
+        "900": { "$value": "#0F172A", "$type": "color" }
+      },
+      "red": {
+        "100": { "$value": "#FEE2E2", "$type": "color" },
+        "600": { "$value": "#DC2626", "$type": "color" },
+        "700": { "$value": "#B91C1C", "$type": "color" }
+      },
+      "mist": { "100": { "$value": "#E8F1F6", "$type": "color" } },
+      "white": { "$value": "#FFFFFF", "$type": "color" },
+      "black": { "$value": "#000000", "$type": "color" }
+    },
+    "radius": {
+      "sm": { "$value": "0.375rem", "$type": "dimension" },
+      "default": { "$value": "0.5rem", "$type": "dimension" },
+      "lg": { "$value": "0.75rem", "$type": "dimension" }
+    },
+    "duration": {
+      "fast": { "$value": "150ms", "$type": "duration" },
+      "normal": { "$value": "200ms", "$type": "duration" },
+      "slow": { "$value": "300ms", "$type": "duration" }
+    }
+  },
+  "semantic": {
+    "color": {
+      "background": { "$value": "{primitive.color.teal.50}", "$type": "color" },
+      "foreground": { "$value": "{primitive.color.teal.900}", "$type": "color" },
+      "card": { "$value": "{primitive.color.white}", "$type": "color" },
+      "card-foreground": { "$value": "{primitive.color.teal.900}", "$type": "color" },
+      "primary": { "$value": "{primitive.color.cyan.600}", "$type": "color" },
+      "primary-foreground": { "$value": "{primitive.color.black}", "$type": "color" },
+      "secondary": { "$value": "{primitive.color.cyan.400}", "$type": "color" },
+      "secondary-foreground": { "$value": "{primitive.color.slate.900}", "$type": "color" },
+      "muted": { "$value": "{primitive.color.mist.100}", "$type": "color" },
+      "muted-foreground": { "$value": "{primitive.color.slate.600}", "$type": "color" },
+      "accent": { "$value": "{primitive.color.teal.100}", "$type": "color" },
+      "accent-foreground": { "$value": "{primitive.color.teal.900}", "$type": "color" },
+      "destructive": { "$value": "{primitive.color.red.600}", "$type": "color" },
+      "destructive-foreground": { "$value": "{primitive.color.white}", "$type": "color" },
+      "border": { "$value": "{primitive.color.teal.100}", "$type": "color" },
+      "input": { "$value": "{primitive.color.slate.500}", "$type": "color" },
+      "ring": { "$value": "{primitive.color.cyan.600}", "$type": "color" },
+      "success": { "$value": "{primitive.color.green.500}", "$type": "color" },
+      "success-foreground": { "$value": "{primitive.color.green.700}", "$type": "color" },
+      "warning": { "$value": "{primitive.color.amber.500}", "$type": "color" },
+      "warning-foreground": { "$value": "{primitive.color.amber.700}", "$type": "color" },
+      "link": { "$value": "{primitive.color.cyan.700}", "$type": "color" }
+    }
+  },
+  "dark": {
+    "semantic": {
+      "color": {
+        "background": { "$value": "{primitive.color.teal.950}", "$type": "color" },
+        "foreground": { "$value": "{primitive.color.teal.100}", "$type": "color" },
+        "card": { "$value": "{primitive.color.teal.900}", "$type": "color" },
+        "primary": { "$value": "{primitive.color.cyan.400}", "$type": "color" },
+        "primary-foreground": { "$value": "{primitive.color.slate.900}", "$type": "color" },
+        "border": { "$value": "{primitive.color.teal.800}", "$type": "color" },
+        "ring": { "$value": "{primitive.color.cyan.400}", "$type": "color" },
+        "link": { "$value": "{primitive.color.cyan.300}", "$type": "color" }
+      }
+    }
+  },
+  "typography": {
+    "heading": "Figtree",
+    "body": "Noto Sans",
+    "scale": {
+      "body": "1rem / 1.6",
+      "h1": "2rem Figtree semibold (dashboard title)",
+      "card-title": "1.25rem Figtree medium",
+      "form-title": "1.5rem Figtree semibold"
+    }
+  }
+}
