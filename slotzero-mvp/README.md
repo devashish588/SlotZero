@@ -103,6 +103,12 @@ Copy `.env.example` to `.env` and set:
 
 The app loads a project-root `.env` file (without overriding variables already set in the environment). Configure the same variables in your hosting platform for deployment.
 
+On Vercel, the default database path is `/tmp/slotzero.db` because the deployed
+application directory is read-only. Vercel's `/tmp` storage is ephemeral and
+must not be treated as durable appointment storage; use a host with a persistent
+volume or migrate the database layer to managed PostgreSQL before relying on
+cross-invocation data persistence.
+
 ## Known MVP limitations / next production steps
 
 - SQLite is appropriate for a single-instance demo and serializes all writes. For multi-instance production, migrate to PostgreSQL and use a database exclusion constraint on `(doctor_id, tstzrange(start_utc, end_utc, '[)'))` for confirmed appointments, in addition to transactions.

@@ -58,3 +58,13 @@ python -m pytest -q
   and time, and a route to the relevant doctor calendar date.
 - Once all affected confirmed appointments are legitimately cancelled, the
   schedule update succeeds.
+
+## Deployment incident follow-up
+
+The Vercel production log showed `sqlite3.OperationalError: unable to open
+database file` during FastAPI lifespan startup because the default SQLite path
+resolved inside Vercel's read-only deployment directory. The app now selects
+`/tmp/slotzero.db` when `VERCEL=1`, which restores function startup. This is
+only a temporary runtime fallback: Vercel `/tmp` is ephemeral, so durable
+appointment persistence still requires a persistent host volume or managed
+database.

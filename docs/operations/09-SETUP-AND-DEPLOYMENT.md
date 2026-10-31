@@ -63,6 +63,12 @@ pytest -q
 | `SLOTZERO_DB_PATH` | `./slotzero.db` | SQLite database path; relative paths resolve from project directory |
 | `SLOTZERO_COOKIE_SECURE` | `false` | Set `true` when cookies are served over HTTPS |
 
+When `VERCEL=1`, the app defaults `SLOTZERO_DB_PATH` to `/tmp/slotzero.db`
+so the FastAPI function can start on Vercel's read-only deployment filesystem.
+That location is temporary, not durable, and is only a boot/runtime fallback.
+Do not use it for a persistent judge or production database; use a persistent
+volume or managed PostgreSQL instead.
+
 The app loads `.env` from project root and does not override variables already defined in the environment.
 
 ## 5. Database lifecycle

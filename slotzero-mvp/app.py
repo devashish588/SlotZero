@@ -34,7 +34,8 @@ def load_env_file() -> None:
 
 
 load_env_file()
-_db_path_setting = Path(os.getenv("SLOTZERO_DB_PATH", "slotzero.db"))
+_default_db_path = "/tmp/slotzero.db" if os.getenv("VERCEL") == "1" else "slotzero.db"
+_db_path_setting = Path(os.getenv("SLOTZERO_DB_PATH", _default_db_path))
 DB_PATH = str(_db_path_setting if _db_path_setting.is_absolute() else (BASE_DIR / _db_path_setting).resolve())
 COOKIE_SECURE = os.getenv("SLOTZERO_COOKIE_SECURE", "false").lower() == "true"
 SESSION_DAYS = 7
