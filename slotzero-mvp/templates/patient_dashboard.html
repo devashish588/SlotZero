@@ -30,10 +30,9 @@
   <div class="section-heading"><div><div class="eyebrow"><span></span> FIND YOUR DOCTOR</div><h2>Care that fits your day</h2><p class="muted">Explore doctors and see availability for your calendar date in {{ user.timezone }}.</p></div><span class="result-count">{{ doctors|length }} doctors</span></div>
   <form class="filter-bar" method="get" action="/patient/dashboard">
     <label class="filter-field doctor-filter"><span>⌕</span><select name="name" aria-label="Choose a doctor"><option value="">All doctors</option>{% for choice in doctor_choices %}<option value="{{ choice.full_name }}" {% if name == choice.full_name %}selected{% endif %}>{{ choice.full_name }}</option>{% endfor %}</select></label>
-    <label class="filter-field"><span>✳</span><input name="specialization" value="{{ specialization }}" placeholder="Specialization"></label>
     <label class="filter-field date-filter"><span>▦</span><input type="date" name="availability_date" value="{{ selected_day }}" aria-label="Availability date in {{ user.timezone }}"></label>
     <button class="button dark" type="submit">Search <span>→</span></button>
-    {% if name or specialization or request.query_params.get('availability_date') %}<a class="clear-link" href="/patient/dashboard">Clear</a>{% endif %}
+    {% if name or request.query_params.get('availability_date') %}<a class="clear-link" href="/patient/dashboard">Clear</a>{% endif %}
   </form>
   {% if doctors %}
     <div class="doctor-grid">
@@ -47,7 +46,7 @@
       {% endfor %}
     </div>
   {% else %}
-    <div class="empty-state"><div class="empty-icon">⌕</div><h3>No doctors match your search</h3><p>Try another name, specialization or date.</p><a href="/patient/dashboard" class="button outline">Clear filters</a></div>
+    <div class="empty-state"><div class="empty-icon">⌕</div><h3>No doctors match your search</h3><p>Try another doctor or date.</p><a href="/patient/dashboard" class="button outline">Clear filters</a></div>
   {% endif %}
 </section>
 <section class="section-block appointments-section" id="appointments">

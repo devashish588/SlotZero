@@ -624,7 +624,7 @@ def update_patient_timezone(
 @app.get("/patient/dashboard", response_class=HTMLResponse)
 def patient_dashboard(
     request: Request, user: dict[str, Any] = Depends(require_user),
-    name: str = "", specialization: str = "", availability_date: str = "",
+    name: str = "", availability_date: str = "",
 ):
     require_role(user, "patient")
     default_day = utc_now().astimezone(ZoneInfo(user["timezone"])).date()
@@ -645,9 +645,6 @@ def patient_dashboard(
         if name.strip():
             query += " AND u.full_name LIKE ?"
             params.append(f"%{name.strip()}%")
-        if specialization.strip():
-            query += " AND d.specialization LIKE ?"
-            params.append(f"%{specialization.strip()}%")
         query += " ORDER BY u.full_name"
         doctor_rows = conn.execute(query, params).fetchall()
         doctors = []
@@ -698,7 +695,7 @@ def patient_dashboard(
         request, "patient_dashboard.html", user, doctors=doctors, upcoming=upcoming, history=history,
         total_appointments=total, selected_day=selected_day.isoformat(), name=name,
             doctor_choices=doctor_choices,
-            specialization=specialization, allowed_zones=ALLOWED_ZONES,
+            allowed_zones=ALLOWED_ZONES,
     )
 
 

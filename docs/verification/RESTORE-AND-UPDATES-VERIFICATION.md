@@ -65,3 +65,9 @@ The shared docs/INDEX.md also contains concurrent interview-preparation edits. I
 The patient doctor-name field is now a native dropdown populated from all configured doctors, including when results are filtered. The existing server-side name filter and availability rules remain unchanged. On the doctor dashboard, Working hours and Blocked time now show their respective card independently; Overview still shows the full dashboard. The selected working-hours view uses a two-column week layout on wider screens and one column on narrow screens. No booking or Google sync behavior changed.
 
 Verification: 17 update tests passed; the focused dropdown assertion covers filtered results. The browser workflow passed with zero findings, JavaScript errors or external requests, including new visibility assertions for both workspace links and browser Back. Evidence: `.design-qa/redesign/run-pbihb2ng/`. `node --check` and `git diff --check` passed. Live Google OAuth remains unconfigured and was not tested.
+
+## Search and layout reversal (2026-11-01)
+
+At the user's request, the doctor dashboard returned to the previous side-by-side settings cards and existing hash-link behavior. The doctor dropdown and optional Google Calendar integration remain. The patient search no longer offers or processes a specialization filter; specialty labels remain on doctor cards and appointments. This is a search-control change, not a doctor-profile or booking-data change.
+
+The 17 focused tests and the browser workflow passed; browser findings, JavaScript errors and external requests were zero. Evidence: `.design-qa/redesign/run-m9w4kt8b/`. Live Google OAuth remains pending local credentials and was not tested.
