@@ -1,0 +1,18 @@
+:root {
+  color-scheme: light;
+  --color-paper: #f3f6f2; --color-paper-2: #e9efea; --color-paper-3: #dbe9df; --color-surface: #fdfefd;
+  --color-ink: #18372e; --color-ink-2: #304d42; --color-muted: #52665c;
+  --color-rule: #cfdbd2; --color-input-edge: #778d7f;
+  --color-accent: #176449; --color-accent-deep: #104d38; --color-accent-ink: #f6fff8; --color-focus: #147354;
+  --color-shell: #153e32; --color-shell-2: #255342; --color-shell-ink: #f1f7ee; --color-shell-muted: #c0d7c7; --color-shell-rule: #47705b;
+  --color-error: #9e3531; --color-error-paper: #fbeeea; --color-success: #176449; --color-success-paper: #e0eee5; --color-info-paper: #e9efea;
+  --font-display: 'Lexend', 'Segoe UI', sans-serif; --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --text-xs: .875rem; --text-sm: .9375rem; --text-md: 1rem; --text-lg: 1.125rem; --text-xl: 1.25rem; --text-2xl: 1.5rem; --text-3xl: 2rem;
+  --text-display: 2rem; --text-section: 1.5rem; --text-title: 1.125rem; --display-weight: 500; --tracking-display: -.025em;
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px;
+  --space-20: 20px; --space-32: 32px; --space-48: 48px;
+  --radius-input: 8px; --radius-card: 12px; --container: 1280px; --gutter: 40px; --gap-columns: 24px; --rail-width: 232px;
+  --shadow-menu: 0 12px 32px #18372e24;
+  --ease-out: cubic-bezier(.16, 1, .3, 1); --ease-in: cubic-bezier(.7, 0, .84, 0); --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --z-dropdown: 100; --z-sticky: 200;
+}

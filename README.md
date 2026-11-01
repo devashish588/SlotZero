@@ -23,6 +23,7 @@ Enforce roles, ownership and authenticated mutation CSRF on the server. Store UT
 ## Navigation and structure
 
 - [Engineering documentation index](docs/INDEX.md)
+- [Current design system](DESIGN.md) and [redesign verification](docs/verification/REDESIGN-VERIFICATION.md) — 2026-11-01, 175 tests passed
 - [Repository instructions](AGENTS.md)
 - [Legacy design references](design-system/README.md)
 

@@ -35,6 +35,11 @@ Thumbs.db
 
 # Local-only preferences
 .impeccable/config.local.json
+.impeccable/questions/
+.impeccable/review/
+.impeccable/mocks/
+.hallmark/
+.design-qa/
 
 # Runtime data, coverage, archives and local tooling
 *.db

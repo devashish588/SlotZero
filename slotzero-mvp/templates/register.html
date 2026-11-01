@@ -2,15 +2,14 @@
 {% block title %}Create account{% endblock %}
 {% block auth_content %}
 <div class="auth-card-wrap">
-  <div class="eyebrow"><span></span> PATIENT REGISTRATION</div>
-  <h2>Make time for<br>your health<span class="text-accent">.</span></h2>
+  <h1>Make time for your health.</h1>
   <p class="auth-subtitle">Create an account to discover doctors and manage your appointments.</p>
   <form method="post" action="/register" class="form-stack">
-    <label>Full name<input name="full_name" placeholder="Your name" minlength="2" maxlength="80" required></label>
-    <label>Email address<input type="email" name="email" placeholder="you@example.com" required></label>
-    <label>Password<input type="password" name="password" placeholder="At least 10 characters" minlength="10" required></label>
+    <label>Full name<input name="full_name" autocomplete="name" placeholder="Your name" minlength="2" maxlength="80" required></label>
+    <label>Email address<input type="email" name="email" autocomplete="username" placeholder="you@example.com" required></label>
+    <label>Password<input type="password" name="password" autocomplete="new-password" placeholder="At least 10 characters" minlength="10" required></label>
     <label>Your time zone<select name="timezone_name" required><option value="Asia/Kolkata">Asia/Kolkata · India</option><option value="Europe/London">Europe/London · London</option><option value="America/New_York">America/New_York · New York</option></select></label>
-    <button class="button primary full" type="submit">Create patient account <span>→</span></button>
+    <button class="button primary full" type="submit">Create patient account</button>
   </form>
   <div class="auth-switch">Already have an account? <a href="/login">Sign in</a></div>
   <div class="notice info compact-notice"><span>i</span>Doctor accounts are provisioned by the clinic. Public doctor registration is disabled.</div>

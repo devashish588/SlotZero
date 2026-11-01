@@ -63,6 +63,9 @@
 
 ## Verification reports
 
+- [Current visual design system](../DESIGN.md)
+- [Redesign plan](verification/REDESIGN-PLAN.md) and [verification](verification/REDESIGN-VERIFICATION.md) — 2026-11-01, 175 tests passed; existing demo/deployment limits remain
+
 - [Phase 0](verification/PHASE-0-AUDIT.md)
 - [Phase 1](verification/PHASE-1-VERIFICATION.md)
 - [Phase 2](verification/PHASE-2-VERIFICATION.md)

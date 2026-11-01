@@ -1,4 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navigation = document.getElementById('workspace-nav');
+  if (menuToggle && navigation) {
+    const mobile = window.matchMedia('(max-width: 60rem)');
+    const setMenu = (open) => {
+      navigation.hidden = mobile.matches && !open;
+      menuToggle.setAttribute('aria-expanded', String(open));
+    };
+    menuToggle.hidden = false;
+    setMenu(false);
+    mobile.addEventListener('change', () => setMenu(false));
+    menuToggle.addEventListener('click', () => setMenu(navigation.hidden));
+    menuToggle.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobile.matches) setMenu(false);
+    });
+    navigation.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobile.matches) {
+        setMenu(false);
+        menuToggle.focus();
+      }
+    });
+    navigation.addEventListener('click', (event) => {
+      if (event.target.closest('a') && mobile.matches) {
+        setMenu(false);
+        requestAnimationFrame(() => document.getElementById('main-content').focus({ preventScroll: true }));
+      }
+    });
+  }
+
+  const errorNotice = document.querySelector('.notice[role="alert"]');
+  if (errorNotice) {
+    errorNotice.tabIndex = -1;
+    errorNotice.focus();
+  }
   document.querySelectorAll('form').forEach((form) => {
     form.addEventListener('submit', (event) => {
       const message = form.getAttribute('data-confirm');
@@ -65,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function openDropdown() {
       dropdown.hidden = false;
       trigger.setAttribute('aria-expanded', 'true');
+      (dropdown.querySelector('[aria-selected="true"]') || options[0]).focus();
     }
 
     function showSaving() {
@@ -97,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const newZone = option.dataset.zone;
       if (newZone === display.textContent.trim()) {
         closeDropdown();
+        trigger.focus();
         return;
       }
       isSubmitting = true;
@@ -142,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .finally(() => {
           hideSaving();
           isSubmitting = false;
+          trigger.focus();
         });
     });
 
@@ -155,6 +192,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Keyboard navigation
     trigger.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeDropdown();
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        openDropdown();
+      }
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         if (dropdown.hidden) openDropdown(); else closeDropdown();
@@ -166,6 +207,14 @@ document.addEventListener('DOMContentLoaded', () => {
         closeDropdown();
         trigger.focus();
       }
+      const index = Array.from(options).indexOf(document.activeElement);
+      if (['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(e.key)) {
+        e.preventDefault();
+        const next = e.key === 'Home' ? 0 : e.key === 'End' ? options.length - 1
+          : (index + (e.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length;
+        options[next].focus();
+      }
+      if (e.key === 'Tab') closeDropdown();
     });
   }
 });
