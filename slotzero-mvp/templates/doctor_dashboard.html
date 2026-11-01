@@ -3,16 +3,16 @@
 {% block breadcrumb %}Doctor overview{% endblock %}
 {% block content %}
 <section class="welcome-row doctor-welcome">
-  <div><h1>Good day, {{ user.full_name.split(' ')[1] }}.</h1><p class="muted">Your schedule and patients, together.</p></div>
-  <div class="date-pill"><div><small>Your local time</small><strong>{{ user.timezone }}</strong></div></div>
+  <div><div class="eyebrow"><span></span> DOCTOR WORKSPACE</div><h1>Good day, {{ user.full_name.split(' ')[1] }}<span class="text-accent">.</span></h1><p class="muted">Your schedule, your patients, all in one place.</p></div>
+  <div class="date-pill"><span class="date-icon">◷</span><div><small>YOUR LOCAL TIME</small><strong>{{ user.timezone }}</strong></div></div>
 </section>
 <section class="stats-grid doctor-stats">
-  <div class="stat-card"><div><small>Upcoming bookings</small><strong>{{ upcoming_count }}</strong><span>Confirmed appointments</span></div></div>
-  <div class="stat-card"><div><small>Consultation length</small><strong>{{ profile.consultation_minutes }} <small class="unit">min</small></strong><span>Per appointment</span></div></div>
-  <div class="stat-card"><div><small>Your time zone</small><strong class="stat-zone">{{ user.timezone.split('/')[-1].replace('_',' ') }}</strong><span>Working hours use local time</span></div></div>
+  <div class="stat-card"><div class="stat-icon mint">▦</div><div><small>UPCOMING BOOKINGS</small><strong>{{ upcoming_count }}</strong><span>Confirmed appointments</span></div></div>
+  <div class="stat-card"><div class="stat-icon lavender">◷</div><div><small>CONSULTATION LENGTH</small><strong>{{ profile.consultation_minutes }} <small class="unit">MIN</small></strong><span>Per appointment</span></div></div>
+  <div class="stat-card"><div class="stat-icon amber">⌖</div><div><small>YOUR TIME ZONE</small><strong class="stat-zone">{{ user.timezone.split('/')[-1].replace('_',' ') }}</strong><span>Working hours use local time</span></div></div>
 </section>
 <section class="section-block" id="appointments">
-  <div class="section-heading"><div><h2>Daily appointments</h2><p class="muted">Patient details and times in {{ user.timezone }}.</p></div><form class="inline-date-form" method="get"><label for="appointment-day">Calendar date<input id="appointment-day" type="date" name="date" value="{{ selected_day }}"></label><button class="button outline" type="submit">View day</button></form></div>
+  <div class="section-heading"><div><div class="eyebrow"><span></span> YOUR CALENDAR</div><h2>Daily appointments</h2><p class="muted">Patient details and times in {{ user.timezone }}.</p></div><form class="inline-date-form" method="get"><label>Calendar date<input type="date" name="date" value="{{ selected_day }}"></label><button class="button outline" type="submit">View day</button></form></div>
   {% if appointments %}
   <div class="appointment-list doctor-appointment-list">
     {% for appointment in appointments %}
@@ -25,46 +25,52 @@
     {% endfor %}
   </div>
   {% else %}
-  <div class="empty-inline"><div><strong>No appointments on this day</strong><small>Bookings will appear here as patients reserve open slots.</small></div></div>
+  <div class="empty-inline"><span>◷</span><div><strong>No appointments on this day</strong><small>Bookings will appear here as patients reserve open slots.</small></div></div>
   {% endif %}
 </section>
 <section class="section-block settings-grid">
   <div class="settings-card" id="schedule">
-    <div class="settings-title"><div><h2>Working hours</h2><p class="muted">Set weekly working ranges in your local time. Use commas for split shifts.</p></div></div>
+    <div class="settings-title"><div><div class="eyebrow"><span></span> AVAILABILITY</div><h2>Working hours</h2><p class="muted">Set weekly working ranges in your local time. Add ranges for split shifts.</p></div><span class="setting-icon">◷</span></div>
     <form method="post" action="/doctor/schedule" class="form-stack compact-form">
       <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-      <p class="schedule-profile"><strong>{{ profile.full_name }}</strong><br>{{ profile.specialization }}<br>{{ profile.email }}<br>{{ profile.bio }}</p>
+      <p><strong>{{ profile.full_name }}</strong> · {{ profile.specialization }}<br>{{ profile.email }}<br>{{ profile.bio }}</p>
       <label>Your time zone<select name="timezone_name" required>{% for zone in allowed_zones %}<option value="{{ zone }}" {% if user.timezone == zone %}selected{% endif %}>{{ zone }}</option>{% endfor %}</select><small class="field-help">Weekly hours use this zone. Existing bookings and blocked periods keep their original instants.</small></label>
-      <label>Weekly schedule<textarea name="schedule_text" rows="8" spellcheck="false" required>{{ schedule_text }}</textarea><small class="field-help">Example: Mon: 09:00-12:00,13:00-17:00. Leave after the colon empty for a day off.</small></label>
+      <div id="weekly-editor" hidden><p class="field-help">Times use the time zone selected above. Add another range for a split shift; leave a day empty for time off.</p><div id="weekly-days"></div><button type="button" class="text-action" id="schedule-text-toggle" aria-expanded="false" aria-controls="schedule-text-field">Edit schedule as text</button></div>
+      <label id="schedule-text-field">Weekly schedule<textarea name="schedule_text" rows="8" spellcheck="false" required>{{ schedule_text }}</textarea><small class="field-help">Example: Mon: 09:00-12:00,13:00-17:00. Leave after the colon empty for a day off.</small></label>
       <label>Appointment duration<select name="consultation_minutes"><option value="15" {% if profile.consultation_minutes == 15 %}selected{% endif %}>15 minutes</option><option value="30" {% if profile.consultation_minutes == 30 %}selected{% endif %}>30 minutes</option><option value="60" {% if profile.consultation_minutes == 60 %}selected{% endif %}>60 minutes</option></select></label>
-      <button class="button primary" type="submit">Save availability</button>
+      <button class="button primary" type="submit">Save availability <span>→</span></button>
     </form>
+    <section class="calendar-settings" aria-labelledby="calendar-heading"><h3 id="calendar-heading">Google Calendar</h3><p>Export confirmed appointments to a separate SlotZero calendar. Sync again after bookings, cancellations or rescheduling. Patient names are not shared.</p>
+    {% if calendar_connected %}<p>Connected{% if calendar_last_synced %}. Last synced: {{ calendar_last_synced }}{% endif %}</p><div class="calendar-actions"><form method="post" action="/doctor/calendar/sync"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button class="button outline" type="submit">Sync now</button></form><form method="post" action="/doctor/calendar/disconnect" data-confirm="Disconnect Google Calendar? Exported events will remain in Google."><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button class="text-action danger" type="submit">Disconnect</button></form></div>
+    {% elif calendar_configured %}<form method="post" action="/doctor/calendar/connect"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button class="button outline" type="submit">Connect Google Calendar</button></form>
+    {% else %}<p class="field-help">Google Calendar is not enabled yet. Ask the clinic operator to enable the connection.</p>{% endif %}
+    <p class="field-help">Weekly availability is managed above. Google changes do not change SlotZero availability.</p></section>
   </div>
   <div class="settings-card" id="blocks">
-    <div class="settings-title"><div><h2>Blocked periods</h2><p class="muted">Add breaks, holidays or other unavailable periods.</p></div></div>
+    <div class="settings-title"><div><div class="eyebrow"><span></span> TIME OFF</div><h2>Blocked periods</h2><p class="muted">Add breaks, holidays or other unavailable periods.</p></div><span class="setting-icon">▧</span></div>
     <form method="post" action="/doctor/blocks" class="form-stack compact-form">
       <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
       <label>Reason<input name="label" maxlength="80" placeholder="Lunch break, personal leave..."></label>
       <label>Date<input type="date" name="block_date" min="{{ selected_day }}" required></label>
       <div class="two-fields"><label>Start<input type="time" name="start_time" required></label><label>End<input type="time" name="end_time" required></label></div>
-      <button class="button dark" type="submit">Add blocked time</button>
+      <button class="button dark" type="submit">Add blocked time <span>＋</span></button>
     </form>
     <div class="blocked-list">
       <div class="blocked-list-head"><strong>Recent blocked periods</strong><span>{{ blocked_periods|length }}</span></div>
       {% for block in blocked_periods %}
-      <div class="blocked-item"><div><strong>{{ block.label }}</strong><small>{{ block.start_display }} – {{ block.end_display }}</small><small>{{ user.timezone }}</small></div><form method="post" action="/doctor/blocks/{{ block.id }}/delete"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button class="icon-button" title="Remove block" aria-label="Remove block: {{ block.label }}" type="submit"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></form></div>
+      <div class="blocked-item"><span class="blocked-mark">—</span><div><strong>{{ block.label }}</strong><small>{{ block.start_display }} – {{ block.end_display }} · {{ user.timezone }}</small></div><form method="post" action="/doctor/blocks/{{ block.id }}/delete"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button class="icon-button" title="Remove block">×</button></form></div>
       {% else %}<div class="muted small-copy">No blocked periods yet.</div>{% endfor %}
     </div>
   </div>
 </section>
 <section class="section-block history-section" id="history">
-  <div class="section-heading"><div><h2>Recent appointment activity</h2><p class="muted">A record of booking, cancellation and rescheduling events for your schedule.</p></div></div>
+  <div class="section-heading"><div><div class="eyebrow"><span></span> AUDIT TRAIL</div><h2>Recent appointment activity</h2><p class="muted">A record of booking, cancellation and rescheduling events for your schedule.</p></div></div>
   {% if history %}
     <div class="history-list">
       {% for event in history %}
-      <div class="history-row"><div class="history-copy"><strong>{{ event.action|title }}: {{ event.patient_name }}</strong><small>{{ event.created_display }}</small><small>{{ event.actor_name }}</small>{% if event.old_display or event.new_display %}<small>{% if event.old_display %}From {{ event.old_display }}{% endif %}{% if event.old_display and event.new_display %}<br>{% endif %}{% if event.new_display %}To {{ event.new_display }}{% endif %}</small>{% endif %}</div></div>
+      <div class="history-row"><span class="history-dot {{ event.action }}"></span><div class="history-copy"><strong>{{ event.action|title }} · {{ event.patient_name }}</strong><small>{{ event.created_display }} · {{ event.actor_name }}</small>{% if event.old_display or event.new_display %}<small>{% if event.old_display %}From {{ event.old_display }}{% endif %}{% if event.old_display and event.new_display %} → {% endif %}{% if event.new_display %}To {{ event.new_display }}{% endif %}</small>{% endif %}</div></div>
       {% endfor %}
     </div>
-  {% else %}<div class="empty-inline"><div><strong>No activity yet</strong><small>Patient booking and appointment changes will appear here.</small></div></div>{% endif %}
+  {% else %}<div class="empty-inline"><span>↺</span><div><strong>No activity yet</strong><small>Patient booking and appointment changes will appear here.</small></div></div>{% endif %}
 </section>
 {% endblock %}

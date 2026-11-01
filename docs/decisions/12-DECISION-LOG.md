@@ -1,5 +1,14 @@
 # SlotZero — Architecture Decision Log
 
+## ADR-013 — Restore previous UI and add targeted scheduling updates
+
+**Status:** Accepted by explicit user request, 2026-11-01
+**Decision:** The user rejected the green redesign and requested the previous navy/card composition with readable fonts, correct path/hash navigation selection, a day-by-day weekly editor and an in-app notification bell/pop-ups. Weekly pickers serialize the existing schedule_text contract; server validation and booking rules remain unchanged. Notifications reuse role-scoped appointment events, poll while the page is open and keep browser-local read state.
+
+The user additionally selected Google Calendar sync. Implement optional doctor OAuth with encrypted refresh credentials and manual export to a separate app-created calendar, without patient identities. Two additive tables store encrypted connection metadata and expiring hashed OAuth states; this does not change login/session roles or existing appointment tables. Google is not an availability/booking authority. Real OAuth consent and live sync remain pending user configuration; see the [setup guide](../operations/GOOGLE-CALENDAR-SETUP.md). No automatic synchronization, personal-calendar import or OS push delivery is claimed.
+
+**Consequence:** The earlier green visual direction is superseded; historical redesign evidence remains historical. Existing deployment/MVP limitations still apply.
+
 This log records current decisions and makes assumptions explicit. Status describes the current MVP, not a claim of production approval.
 
 ## ADR-001 — Two user-facing portals; no admin dashboard

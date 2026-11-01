@@ -20,11 +20,11 @@ FastAPI/Jinja2, SQLite and vanilla JavaScript/CSS. Synthetic data only. This is 
 
 ## Capabilities and Constraints
 
-Keep existing authentication, roles, ownership, CSRF, booking transactions, idempotency, cancellation, atomic rescheduling and audit history. Keep doctor-local date selection and accurate IANA-zone display for Asia/Kolkata, Europe/London and America/New_York. Working hours start empty. Do not invent appointments, metrics, testimonials, integrations or doctor registration. The two-hour rescheduling cutoff remains a documented assumption, unchanged by this task.
+Keep existing authentication, roles, ownership, CSRF, booking transactions, idempotency, cancellation, atomic rescheduling and audit history. Keep doctor-local date selection and accurate IANA-zone display for Asia/Kolkata, Europe/London and America/New_York. Working hours start empty. Do not invent appointments, metrics, testimonials or doctor registration. The two-hour rescheduling cutoff remains a documented assumption. On 2026-11-01 the user additionally authorized an easier weekly-hours editor, in-app appointment notifications and optional Google Calendar sync. The integration is a manual, doctor-authorized export to a separate app-created calendar; Google edits do not alter SlotZero availability or booking rules. Google OAuth configuration/consent is required before live use.
 
 ## Brand Commitments
 
-Preserve SlotZero's name and existing S0 mark. A premium visual redesign is authorized, with all factual content and functionality preserved.
+Preserve SlotZero's name and existing S0 mark. On 2026-11-01 the user rejected the green redesign and explicitly requested restoration of the previous navy/card layout, with larger readable fonts and targeted workflow fixes. That instruction supersedes the earlier visual redesign direction.
 
 ## Evidence on Hand
 

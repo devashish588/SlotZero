@@ -1,4 +1,179 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = Array.from(document.querySelectorAll('.nav-item'));
+  const updateWorkspace = () => {
+    let selected = navLinks.find(link => {
+      const url = new URL(link.href);
+      return url.pathname === location.pathname && url.hash === location.hash;
+    });
+    if (!selected) selected = navLinks.find(link => location.pathname.startsWith('/appointments/')
+      ? new URL(link.href).hash === '#appointments' : !new URL(link.href).hash);
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link === selected);
+      if (link === selected) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+  updateWorkspace();
+  window.addEventListener('hashchange', updateWorkspace);
+
+  const weeklyEditor = document.getElementById('weekly-editor');
+  if (weeklyEditor) {
+    const textarea = document.querySelector('[name="schedule_text"]');
+    const textField = document.getElementById('schedule-text-field');
+    const daysRoot = document.getElementById('weekly-days');
+    const toggle = document.getElementById('schedule-text-toggle');
+    const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    const names = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    let textMode = false;
+    const parse = () => {
+      const values = days.map(() => []);
+      for (const line of textarea.value.split('\n').filter(line => line.trim())) {
+        const match = line.trim().match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun):\s*(.*)$/);
+        if (!match) return null;
+        for (const range of match[2].split(',').filter(range => range.trim())) {
+          const clocks = range.trim().match(/^(\d{2}:\d{2})-(\d{2}:\d{2})$/);
+          if (!clocks) return null;
+          values[days.indexOf(match[1])].push([clocks[1], clocks[2]]);
+        }
+      }
+      return values;
+    };
+    const serialize = () => {
+      if (textMode) return;
+      textarea.value = days.map((day, index) => {
+        const ranges = Array.from(daysRoot.children[index].querySelectorAll('.weekly-range')).map(row => {
+          const [start, end] = row.querySelectorAll('input');
+          end.setCustomValidity(start.value && end.value && start.value >= end.value ? 'End time must be after start time.' : '');
+          return `${start.value}-${end.value}`;
+        });
+        return `${day}: ${ranges.join(',')}`;
+      }).join('\n');
+    };
+    const addRange = (container, day, clocks = ['', '']) => {
+      const row = document.createElement('div');
+      row.className = 'weekly-range';
+      ['Start', 'End'].forEach((label, index) => {
+        const wrapper = document.createElement('label');
+        wrapper.textContent = label;
+        const input = document.createElement('input');
+        input.type = 'time'; input.required = true; input.value = clocks[index];
+        input.setAttribute('aria-label', `${day} ${label.toLowerCase()} time`);
+        input.addEventListener('input', serialize);
+        wrapper.append(input); row.append(wrapper);
+      });
+      const remove = document.createElement('button');
+      remove.type = 'button'; remove.className = 'icon-button'; remove.textContent = '×';
+      remove.setAttribute('aria-label', `Remove ${day} working range`);
+      remove.addEventListener('click', () => { row.remove(); serialize(); container.nextElementSibling.focus(); });
+      row.append(remove); container.append(row);
+      return row;
+    };
+    const renderWeek = values => {
+      daysRoot.replaceChildren();
+      values.forEach((ranges, index) => {
+        const fieldset = document.createElement('fieldset'); fieldset.className = 'weekly-day';
+        const legend = document.createElement('legend'); legend.textContent = names[index];
+        const container = document.createElement('div'); container.className = 'weekly-ranges';
+        const add = document.createElement('button');
+        add.type = 'button'; add.className = 'text-action'; add.textContent = 'Add hours';
+        add.setAttribute('aria-label', `Add ${names[index]} hours`);
+        add.addEventListener('click', () => { addRange(container, names[index]).querySelector('input').focus(); serialize(); });
+        fieldset.append(legend, container, add); daysRoot.append(fieldset);
+        ranges.forEach(range => addRange(container, names[index], range));
+      });
+    };
+    const initial = parse();
+    if (initial) {
+      renderWeek(initial); weeklyEditor.hidden = false; textField.hidden = true; textarea.required = false;
+      toggle.addEventListener('click', () => {
+        if (textMode) {
+          const values = parse();
+          if (!values) { textarea.setCustomValidity('Use one weekday per line, for example Mon: 09:00-12:00.'); textarea.reportValidity(); return; }
+          textarea.setCustomValidity(''); renderWeek(values);
+        } else serialize();
+        textMode = !textMode;
+        textField.hidden = !textMode; daysRoot.hidden = textMode; textarea.required = textMode;
+        daysRoot.querySelectorAll('input').forEach(input => input.disabled = textMode);
+        toggle.setAttribute('aria-expanded', String(textMode));
+        toggle.textContent = textMode ? 'Use day-by-day editor' : 'Edit schedule as text';
+        if (textMode) textarea.focus();
+      });
+      textarea.addEventListener('input', () => textarea.setCustomValidity(''));
+      textarea.form.addEventListener('submit', event => {
+        serialize();
+        if (!textarea.form.reportValidity()) event.preventDefault();
+      });
+      // Text remains the source of truth for no-script use and existing form clients.
+      textarea.addEventListener('input', () => {
+        if (!textMode) { const values = parse(); if (values) renderWeek(values); }
+      });
+    }
+  }
+
+  const bell = document.getElementById('notification-bell');
+  if (bell) {
+    const panel = document.getElementById('notification-panel');
+    const status = document.getElementById('notification-status');
+    const list = document.getElementById('notification-items');
+    const count = document.getElementById('notification-count');
+    const toast = document.getElementById('update-toast');
+    const key = `slotzero-notifications-${document.body.dataset.userId}`;
+    let items = [], seen = null, initialized = false;
+    try { const value = localStorage.getItem(key); if (value !== null) seen = Number(value) || 0; } catch (_) { /* Use memory when storage is unavailable. */ }
+    const remember = value => { seen = value; try { localStorage.setItem(key, String(value)); } catch (_) { /* In-memory read state still works. */ } };
+    const message = item => `${item.actor_name}: appointment ${item.action}.`;
+    const showToast = text => {
+      document.getElementById('update-toast-message').textContent = text;
+      if (panel.hidden) toast.hidden = false;
+    };
+    toast.querySelector('button').addEventListener('click', () => { toast.hidden = true; bell.focus(); });
+    const renderUpdates = () => {
+      const unread = items.filter(item => item.id > seen).length;
+      count.textContent = String(unread); count.hidden = unread === 0;
+      bell.setAttribute('aria-label', unread ? `Notifications, ${unread} unread` : 'Notifications');
+      list.replaceChildren();
+      items.forEach(item => {
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = item.href;
+        link.textContent = message(item);
+        const time = document.createElement('time'); time.dateTime = item.created_at;
+        time.textContent = new Date(item.created_at).toLocaleString(undefined, {timeZone: document.querySelector('.timezone-chip').textContent.trim()});
+        li.append(link, time); list.append(li);
+      });
+      status.textContent = items.length ? 'Recent updates for your appointments.' : 'No appointment updates yet.';
+      document.getElementById('notifications-refresh').hidden = items.length === 0;
+    };
+    const setPanel = open => { panel.hidden = !open; bell.setAttribute('aria-expanded', String(open)); if (open) toast.hidden = true; };
+    list.addEventListener('click', event => { if (event.target.closest('a')) setPanel(false); });
+    bell.addEventListener('click', () => { setPanel(panel.hidden); if (!panel.hidden) poll(); });
+    document.getElementById('notifications-read').addEventListener('click', () => { remember(Math.max(seen || 0, ...items.map(item => item.id))); renderUpdates(); });
+    document.getElementById('notifications-refresh').addEventListener('click', () => window.location.reload());
+    document.addEventListener('click', event => { if (!event.target.closest('.notification-control')) setPanel(false); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && !panel.hidden) { setPanel(false); bell.focus(); } });
+    let polling = false;
+    async function poll() {
+      if (polling || document.hidden) return;
+      polling = true;
+      try {
+        const response = await fetch('/notifications', {headers: {'Accept': 'application/json'}, cache: 'no-store'});
+        if (!response.ok || response.redirected) throw new Error('Updates unavailable');
+        const data = await response.json();
+        const previous = Math.max(0, ...items.map(item => item.id));
+        items = data.items;
+        const latest = Math.max(0, ...items.map(item => item.id));
+        if (seen === null) remember(latest);
+        if (latest > seen && (!initialized || latest > previous)) showToast(message(items[0]));
+        initialized = true; renderUpdates();
+      } catch (_) { status.textContent = 'Could not refresh updates. We will retry; your appointments are unchanged.'; }
+      finally { polling = false; }
+    }
+    poll(); window.setInterval(poll, 15000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) poll(); });
+    const notice = document.querySelector('.notice');
+    if (notice) showToast(notice.textContent.trim());
+  }
+
   const menuToggle = document.querySelector('.menu-toggle');
   const navigation = document.getElementById('workspace-nav');
   if (menuToggle && navigation) {
@@ -36,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('form').forEach((form) => {
     form.addEventListener('submit', (event) => {
       const message = form.getAttribute('data-confirm');
-      if (form.getAttribute('aria-busy') === 'true' || (message && !window.confirm(message))) {
+      if (event.defaultPrevented || form.getAttribute('aria-busy') === 'true' || (message && !window.confirm(message))) {
         event.preventDefault();
         return;
       }

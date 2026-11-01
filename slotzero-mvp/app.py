@@ -14,9 +14,10 @@ from typing import Any
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from fastapi import Depends, FastAPI, Form, HTTPException, Query, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, RedirectResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+import google_calendar as gcal
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -234,6 +235,19 @@ def init_db() -> None:
                 token_hash TEXT PRIMARY KEY,
                 csrf_token TEXT NOT NULL,
                 user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                expires_at TEXT NOT NULL
+            );
+            CREATE TABLE IF NOT EXISTS google_calendar_connections (
+                doctor_id INTEGER PRIMARY KEY REFERENCES doctors(user_id) ON DELETE CASCADE,
+                refresh_cipher TEXT NOT NULL,
+                calendar_id TEXT NOT NULL,
+                namespace TEXT NOT NULL,
+                last_synced TEXT
+            );
+            CREATE TABLE IF NOT EXISTS google_calendar_states (
+                state_hash TEXT PRIMARY KEY,
+                doctor_id INTEGER NOT NULL REFERENCES doctors(user_id) ON DELETE CASCADE,
+                session_hash TEXT NOT NULL,
                 expires_at TEXT NOT NULL
             );
             """
@@ -889,6 +903,7 @@ def doctor_dashboard(request: Request, user: dict[str, Any] = Depends(require_us
     with read_db() as conn:
         profile = doctor_record(conn, user["id"])
         schedule_text = schedule_to_text(conn, user["id"])
+        calendar = conn.execute('SELECT last_synced FROM google_calendar_connections WHERE doctor_id=?', (user['id'],)).fetchone()
         rows = conn.execute(
             "SELECT a.*,p.full_name AS patient_name,p.email AS patient_email,p.timezone AS patient_timezone "
             "FROM appointments a JOIN users p ON p.id=a.patient_id "
@@ -926,6 +941,8 @@ def doctor_dashboard(request: Request, user: dict[str, Any] = Depends(require_us
         request, "doctor_dashboard.html", user, profile=dict(profile), schedule_text=schedule_text,
         appointments=appointments, history=history, selected_day=selected_day.isoformat(), upcoming_count=upcoming_count,
         blocked_periods=blocked_display, allowed_zones=ALLOWED_ZONES,
+        calendar_connected=calendar is not None, calendar_last_synced=calendar['last_synced'] if calendar else None,
+        calendar_configured=gcal.configured(),
     )
 
 
@@ -1050,6 +1067,135 @@ def delete_block(block_id: int, user: dict[str, Any] = Depends(require_user), cs
             raise
         return flash_redirect("/doctor/dashboard", "Scheduling is busy. Please retry shortly.", "error")
     return flash_redirect("/doctor/dashboard", "Blocked period removed.")
+
+
+@app.get('/notifications')
+def notifications(user: dict[str, Any] = Depends(require_user)):
+    role_column = 'doctor_id' if user['role'] == 'doctor' else 'patient_id'
+    with read_db() as conn:
+        rows = conn.execute(
+            f'SELECT e.id,e.action,e.created_at,a.start_utc,u.full_name AS actor_name FROM appointment_events e '
+            f'JOIN appointments a ON a.id=e.appointment_id JOIN users u ON u.id=e.actor_id '
+            f'WHERE a.{role_column}=? ORDER BY e.id DESC LIMIT 30',
+            (user['id'],),
+        ).fetchall()
+    items = []
+    for row in rows:
+        item = dict(row)
+        day = db_to_dt(item.pop('start_utc')).astimezone(ZoneInfo(user['timezone'])).date()
+        item['href'] = f'/doctor/dashboard?date={day}#appointments' if user['role'] == 'doctor' else '/patient/dashboard#appointments'
+        items.append(item)
+    return JSONResponse({'items': items}, headers={'Cache-Control': 'no-store'})
+
+
+@app.post('/doctor/calendar/connect')
+def calendar_connect(user: dict[str, Any] = Depends(require_user), csrf_token: str = Form(...)):
+    from urllib.parse import urlencode
+    require_role(user, 'doctor')
+    check_csrf(user, csrf_token)
+    try:
+        config = gcal.settings()
+        state = secrets.token_urlsafe(32)
+        with transaction(immediate=True) as conn:
+            if conn.execute('SELECT 1 FROM google_calendar_connections WHERE doctor_id=?', (user['id'],)).fetchone():
+                return flash_redirect('/doctor/dashboard#schedule', 'Google Calendar is already connected.')
+            conn.execute('DELETE FROM google_calendar_states WHERE doctor_id=? OR expires_at<?', (user['id'], dt_to_db(utc_now())))
+            conn.execute('INSERT INTO google_calendar_states VALUES(?,?,?,?)', (
+                hashlib.sha256(state.encode()).hexdigest(), user['id'],
+                hashlib.sha256(user['csrf_token'].encode()).hexdigest(), dt_to_db(utc_now() + timedelta(minutes=10)),
+            ))
+        query = urlencode({'client_id': config['CLIENT_ID'], 'redirect_uri': config['REDIRECT_URI'],
+                           'response_type': 'code', 'scope': gcal.SCOPE, 'state': state,
+                           'access_type': 'offline', 'prompt': 'consent'})
+        return RedirectResponse('https://accounts.google.com/o/oauth2/v2/auth?' + query, status_code=303)
+    except gcal.CalendarError as exc:
+        return flash_redirect('/doctor/dashboard#schedule', str(exc), 'error')
+
+
+@app.get('/doctor/calendar/callback')
+def calendar_callback(request: Request, user: dict[str, Any] = Depends(require_user), state: str = '', code: str = '', error: str = ''):
+    require_role(user, 'doctor')
+    # The one-use authorization code must not appear in subsequent access logs.
+    request.scope['query_string'] = b''
+    with transaction(immediate=True) as conn:
+        row = conn.execute('SELECT * FROM google_calendar_states WHERE state_hash=?', (hashlib.sha256(state.encode()).hexdigest(),)).fetchone()
+        valid = row and row['doctor_id'] == user['id'] and row['expires_at'] > dt_to_db(utc_now()) and hmac.compare_digest(
+            row['session_hash'], hashlib.sha256(user['csrf_token'].encode()).hexdigest())
+        if not valid:
+            raise HTTPException(status_code=403, detail='Calendar authorization expired or did not match this session. Connect again.')
+        conn.execute('DELETE FROM google_calendar_states WHERE state_hash=?', (row['state_hash'],))
+    try:
+        if error or not code:
+            raise gcal.CalendarError('Google Calendar connection was not authorized. You can try again.')
+        config = gcal.settings()
+        token = gcal.tokens(code=code, redirect_uri=config['REDIRECT_URI'], grant_type='authorization_code')
+        if gcal.SCOPE not in token.get('scope', '').split() or not token.get('refresh_token'):
+            raise gcal.CalendarError('Calendar permission was not granted. Connect again and allow calendar access.')
+        calendar = gcal.request_json('POST', gcal.API + '/calendars', token['access_token'],
+                                     {'summary': 'SlotZero appointments', 'timeZone': user['timezone']})
+        if not isinstance(calendar.get('id'), str) or not calendar['id']:
+            raise gcal.CalendarError()
+        with transaction(immediate=True) as conn:
+            conn.execute('INSERT INTO google_calendar_connections(doctor_id,refresh_cipher,calendar_id,namespace) VALUES(?,?,?,?)',
+                         (user['id'], gcal.encrypt(token['refresh_token']), calendar['id'], secrets.token_hex(16)))
+        return flash_redirect('/doctor/dashboard#schedule', 'Google Calendar connected. Use Sync now to export appointments.')
+    except (gcal.CalendarError, sqlite3.Error) as exc:
+        message = str(exc) if isinstance(exc, gcal.CalendarError) else 'Could not store the calendar connection. Try again.'
+        return flash_redirect('/doctor/dashboard#schedule', message, 'error')
+
+
+@app.post('/doctor/calendar/sync')
+def calendar_sync(user: dict[str, Any] = Depends(require_user), csrf_token: str = Form(...)):
+    require_role(user, 'doctor')
+    check_csrf(user, csrf_token)
+    try:
+        with read_db() as conn:
+            connection = conn.execute('SELECT * FROM google_calendar_connections WHERE doctor_id=?', (user['id'],)).fetchone()
+            if not connection:
+                raise gcal.CalendarError('Connect Google Calendar before syncing.')
+            now = dt_to_db(utc_now())
+            appointments = conn.execute("SELECT id,start_utc,end_utc FROM appointments WHERE doctor_id=? AND status='confirmed' AND end_utc>?", (user['id'], now)).fetchall()
+        token = gcal.tokens(refresh_token=gcal.decrypt(connection['refresh_cipher']), grant_type='refresh_token')
+        if token.get('refresh_token'):
+            with transaction(immediate=True) as conn:
+                conn.execute('UPDATE google_calendar_connections SET refresh_cipher=? WHERE doctor_id=?', (gcal.encrypt(token['refresh_token']), user['id']))
+        gcal.sync(token['access_token'], connection['calendar_id'], connection['namespace'], appointments, now)
+        with transaction(immediate=True) as conn:
+            conn.execute('UPDATE google_calendar_connections SET last_synced=? WHERE doctor_id=?', (dt_to_db(utc_now()), user['id']))
+        return flash_redirect('/doctor/dashboard#schedule', 'Google Calendar is up to date. Local bookings are unchanged.')
+    except gcal.CalendarError as exc:
+        return flash_redirect('/doctor/dashboard#schedule', str(exc) + ' Some Google changes may already have completed; retry safely. Local bookings are unchanged.', 'error')
+    except sqlite3.Error:
+        return flash_redirect('/doctor/dashboard#schedule', 'Could not record calendar sync status. Retry safely; local bookings are unchanged.', 'error')
+
+
+@app.post('/doctor/calendar/disconnect')
+def calendar_disconnect(user: dict[str, Any] = Depends(require_user), csrf_token: str = Form(...)):
+    require_role(user, 'doctor')
+    check_csrf(user, csrf_token)
+    with read_db() as conn:
+        connection = conn.execute('SELECT refresh_cipher FROM google_calendar_connections WHERE doctor_id=?', (user['id'],)).fetchone()
+    message = 'Google Calendar disconnected. Existing exported events remain in Google.'
+    if connection:
+        try:
+            gcal.request_json('POST', 'https://oauth2.googleapis.com/revoke', data={'token': gcal.decrypt(connection['refresh_cipher'])}, form=True)
+        except gcal.CalendarError:
+            message += ' Also remove SlotZero access in your Google account permissions.'
+        with transaction(immediate=True) as conn:
+            conn.execute('DELETE FROM google_calendar_connections WHERE doctor_id=?', (user['id'],))
+            conn.execute('DELETE FROM google_calendar_states WHERE doctor_id=?', (user['id'],))
+    return flash_redirect('/doctor/dashboard#schedule', message)
+
+
+@app.middleware('http')
+async def private_calendar_responses(request: Request, call_next):
+    response = await call_next(request)
+    if request.scope['path'] == '/doctor/calendar/callback':
+        request.scope['query_string'] = b''
+    if request.url.path.startswith('/doctor/calendar'):
+        response.headers['Cache-Control'] = 'no-store'
+        response.headers['Referrer-Policy'] = 'no-referrer'
+    return response
 
 
 @app.get("/health")

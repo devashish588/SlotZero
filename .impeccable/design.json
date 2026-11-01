@@ -1,519 +1,441 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T07:04:47.019637+00:00",
+  "generatedAt": "2026-11-01T09:41:44.514830+00:00",
   "title": "Design System: SlotZero",
   "extensions": {
     "colorMeta": {
-      "accent": {
+      "navy": {
         "role": "primary",
-        "displayName": "Accent",
-        "canonical": "#176449",
+        "displayName": "Navy",
+        "canonical": "#101b2d",
         "tonalRamp": [
-          "oklch(15% 0.0363 164.72)",
-          "oklch(25% 0.0566 164.72)",
-          "oklch(35% 0.0713 164.72)",
-          "oklch(45% 0.0790 164.72)",
-          "oklch(55% 0.0790 164.72)",
-          "oklch(65% 0.0713 164.72)",
-          "oklch(80% 0.0470 164.72)",
-          "oklch(95% 0.0125 164.72)"
+          "oklch(15% 0.0177 259.89)",
+          "oklch(25% 0.0275 259.89)",
+          "oklch(35% 0.0346 259.89)",
+          "oklch(45% 0.0384 259.89)",
+          "oklch(55% 0.0384 259.89)",
+          "oklch(65% 0.0346 259.89)",
+          "oklch(80% 0.0229 259.89)",
+          "oklch(95% 0.0061 259.89)"
         ]
       },
-      "accent-deep": {
+      "navy-2": {
         "role": "primary",
-        "displayName": "Accent deep",
-        "canonical": "#104d38",
+        "displayName": "Navy 2",
+        "canonical": "#17263d",
         "tonalRamp": [
-          "oklch(15% 0.0321 165.23)",
-          "oklch(25% 0.0501 165.23)",
-          "oklch(35% 0.0631 165.23)",
-          "oklch(45% 0.0699 165.23)",
-          "oklch(55% 0.0699 165.23)",
-          "oklch(65% 0.0631 165.23)",
-          "oklch(80% 0.0416 165.23)",
-          "oklch(95% 0.0111 165.23)"
-        ]
-      },
-      "accent-ink": {
-        "role": "primary",
-        "displayName": "Accent ink",
-        "canonical": "#f6fff8",
-        "tonalRamp": [
-          "oklch(15% 0.0060 152.61)",
-          "oklch(25% 0.0093 152.61)",
-          "oklch(35% 0.0117 152.61)",
-          "oklch(45% 0.0130 152.61)",
-          "oklch(55% 0.0130 152.61)",
-          "oklch(65% 0.0117 152.61)",
-          "oklch(80% 0.0077 152.61)",
-          "oklch(95% 0.0021 152.61)"
-        ]
-      },
-      "focus": {
-        "role": "primary",
-        "displayName": "Focus",
-        "canonical": "#147354",
-        "tonalRamp": [
-          "oklch(15% 0.0363 165.18)",
-          "oklch(25% 0.0566 165.18)",
-          "oklch(35% 0.0713 165.18)",
-          "oklch(45% 0.0790 165.18)",
-          "oklch(55% 0.0790 165.18)",
-          "oklch(65% 0.0713 165.18)",
-          "oklch(80% 0.0470 165.18)",
-          "oklch(95% 0.0125 165.18)"
-        ]
-      },
-      "paper": {
-        "role": "neutral",
-        "displayName": "Paper",
-        "canonical": "#f3f6f2",
-        "tonalRamp": [
-          "oklch(15% 0.0028 137.77)",
-          "oklch(25% 0.0044 137.77)",
-          "oklch(35% 0.0055 137.77)",
-          "oklch(45% 0.0061 137.77)",
-          "oklch(55% 0.0061 137.77)",
-          "oklch(65% 0.0055 137.77)",
-          "oklch(80% 0.0036 137.77)",
-          "oklch(95% 0.0010 137.77)"
-        ]
-      },
-      "paper-2": {
-        "role": "neutral",
-        "displayName": "Paper 2",
-        "canonical": "#e9efea",
-        "tonalRamp": [
-          "oklch(15% 0.0042 150.69)",
-          "oklch(25% 0.0065 150.69)",
-          "oklch(35% 0.0082 150.69)",
-          "oklch(45% 0.0091 150.69)",
-          "oklch(55% 0.0091 150.69)",
-          "oklch(65% 0.0082 150.69)",
-          "oklch(80% 0.0054 150.69)",
-          "oklch(95% 0.0014 150.69)"
-        ]
-      },
-      "paper-3": {
-        "role": "neutral",
-        "displayName": "Paper 3",
-        "canonical": "#dbe9df",
-        "tonalRamp": [
-          "oklch(15% 0.0091 154.88)",
-          "oklch(25% 0.0142 154.88)",
-          "oklch(35% 0.0178 154.88)",
-          "oklch(45% 0.0198 154.88)",
-          "oklch(55% 0.0198 154.88)",
-          "oklch(65% 0.0178 154.88)",
-          "oklch(80% 0.0118 154.88)",
-          "oklch(95% 0.0031 154.88)"
-        ]
-      },
-      "surface": {
-        "role": "neutral",
-        "displayName": "Surface",
-        "canonical": "#fdfefd",
-        "tonalRamp": [
-          "oklch(15% 0.0008 145.56)",
-          "oklch(25% 0.0012 145.56)",
-          "oklch(35% 0.0015 145.56)",
-          "oklch(45% 0.0017 145.56)",
-          "oklch(55% 0.0017 145.56)",
-          "oklch(65% 0.0015 145.56)",
-          "oklch(80% 0.0010 145.56)",
-          "oklch(95% 0.0003 145.56)"
+          "oklch(15% 0.0217 258.69)",
+          "oklch(25% 0.0339 258.69)",
+          "oklch(35% 0.0427 258.69)",
+          "oklch(45% 0.0473 258.69)",
+          "oklch(55% 0.0473 258.69)",
+          "oklch(65% 0.0427 258.69)",
+          "oklch(80% 0.0281 258.69)",
+          "oklch(95% 0.0075 258.69)"
         ]
       },
       "ink": {
         "role": "neutral",
         "displayName": "Ink",
-        "canonical": "#18372e",
+        "canonical": "#18263a",
         "tonalRamp": [
-          "oklch(15% 0.0185 172.40)",
-          "oklch(25% 0.0288 172.40)",
-          "oklch(35% 0.0363 172.40)",
-          "oklch(45% 0.0402 172.40)",
-          "oklch(55% 0.0402 172.40)",
-          "oklch(65% 0.0363 172.40)",
-          "oklch(80% 0.0239 172.40)",
-          "oklch(95% 0.0064 172.40)"
-        ]
-      },
-      "ink-2": {
-        "role": "neutral",
-        "displayName": "Ink 2",
-        "canonical": "#304d42",
-        "tonalRamp": [
-          "oklch(15% 0.0180 168.45)",
-          "oklch(25% 0.0281 168.45)",
-          "oklch(35% 0.0354 168.45)",
-          "oklch(45% 0.0393 168.45)",
-          "oklch(55% 0.0393 168.45)",
-          "oklch(65% 0.0354 168.45)",
-          "oklch(80% 0.0234 168.45)",
-          "oklch(95% 0.0062 168.45)"
+          "oklch(15% 0.0192 257.32)",
+          "oklch(25% 0.0299 257.32)",
+          "oklch(35% 0.0377 257.32)",
+          "oklch(45% 0.0418 257.32)",
+          "oklch(55% 0.0418 257.32)",
+          "oklch(65% 0.0377 257.32)",
+          "oklch(80% 0.0249 257.32)",
+          "oklch(95% 0.0066 257.32)"
         ]
       },
       "muted": {
         "role": "neutral",
         "displayName": "Muted",
-        "canonical": "#52665c",
+        "canonical": "#526278",
         "tonalRamp": [
-          "oklch(15% 0.0131 163.49)",
-          "oklch(25% 0.0204 163.49)",
-          "oklch(35% 0.0258 163.49)",
-          "oklch(45% 0.0285 163.49)",
-          "oklch(55% 0.0285 163.49)",
-          "oklch(65% 0.0258 163.49)",
-          "oklch(80% 0.0170 163.49)",
-          "oklch(95% 0.0045 163.49)"
+          "oklch(15% 0.0184 256.42)",
+          "oklch(25% 0.0287 256.42)",
+          "oklch(35% 0.0361 256.42)",
+          "oklch(45% 0.0400 256.42)",
+          "oklch(55% 0.0400 256.42)",
+          "oklch(65% 0.0361 256.42)",
+          "oklch(80% 0.0238 256.42)",
+          "oklch(95% 0.0063 256.42)"
         ]
       },
-      "rule": {
+      "line": {
         "role": "neutral",
-        "displayName": "Rule",
-        "canonical": "#cfdbd2",
+        "displayName": "Line",
+        "canonical": "#dce3eb",
         "tonalRamp": [
-          "oklch(15% 0.0081 153.53)",
-          "oklch(25% 0.0126 153.53)",
-          "oklch(35% 0.0158 153.53)",
-          "oklch(45% 0.0175 153.53)",
-          "oklch(55% 0.0175 153.53)",
-          "oklch(65% 0.0158 153.53)",
-          "oklch(80% 0.0104 153.53)",
-          "oklch(95% 0.0028 153.53)"
+          "oklch(15% 0.0060 251.57)",
+          "oklch(25% 0.0094 251.57)",
+          "oklch(35% 0.0118 251.57)",
+          "oklch(45% 0.0131 251.57)",
+          "oklch(55% 0.0131 251.57)",
+          "oklch(65% 0.0118 251.57)",
+          "oklch(80% 0.0078 251.57)",
+          "oklch(95% 0.0021 251.57)"
         ]
       },
-      "input-edge": {
+      "paper": {
         "role": "neutral",
-        "displayName": "Input edge",
-        "canonical": "#778d7f",
+        "displayName": "Paper",
+        "canonical": "#f6f8fb",
         "tonalRamp": [
-          "oklch(15% 0.0149 157.40)",
-          "oklch(25% 0.0232 157.40)",
-          "oklch(35% 0.0292 157.40)",
-          "oklch(45% 0.0324 157.40)",
-          "oklch(55% 0.0324 157.40)",
-          "oklch(65% 0.0292 157.40)",
-          "oklch(80% 0.0193 157.40)",
-          "oklch(95% 0.0051 157.40)"
+          "oklch(15% 0.0021 258.32)",
+          "oklch(25% 0.0032 258.32)",
+          "oklch(35% 0.0040 258.32)",
+          "oklch(45% 0.0045 258.32)",
+          "oklch(55% 0.0045 258.32)",
+          "oklch(65% 0.0040 258.32)",
+          "oklch(80% 0.0027 258.32)",
+          "oklch(95% 0.0007 258.32)"
         ]
       },
-      "shell": {
+      "white": {
         "role": "neutral",
-        "displayName": "Shell",
-        "canonical": "#153e32",
+        "displayName": "White",
+        "canonical": "#fff",
         "tonalRamp": [
-          "oklch(15% 0.0231 170.94)",
-          "oklch(25% 0.0359 170.94)",
-          "oklch(35% 0.0453 170.94)",
-          "oklch(45% 0.0502 170.94)",
-          "oklch(55% 0.0502 170.94)",
-          "oklch(65% 0.0453 170.94)",
-          "oklch(80% 0.0299 170.94)",
-          "oklch(95% 0.0079 170.94)"
+          "oklch(15% 0.0000 89.88)",
+          "oklch(25% 0.0000 89.88)",
+          "oklch(35% 0.0000 89.88)",
+          "oklch(45% 0.0000 89.88)",
+          "oklch(55% 0.0000 89.88)",
+          "oklch(65% 0.0000 89.88)",
+          "oklch(80% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
         ]
       },
-      "shell-2": {
+      "mint": {
         "role": "neutral",
-        "displayName": "Shell 2",
-        "canonical": "#255342",
+        "displayName": "Mint",
+        "canonical": "#ddf5eb",
         "tonalRamp": [
-          "oklch(15% 0.0267 166.90)",
-          "oklch(25% 0.0416 166.90)",
-          "oklch(35% 0.0524 166.90)",
-          "oklch(45% 0.0581 166.90)",
-          "oklch(55% 0.0581 166.90)",
-          "oklch(65% 0.0524 166.90)",
-          "oklch(80% 0.0346 166.90)",
-          "oklch(95% 0.0092 166.90)"
+          "oklch(15% 0.0129 168.80)",
+          "oklch(25% 0.0201 168.80)",
+          "oklch(35% 0.0253 168.80)",
+          "oklch(45% 0.0281 168.80)",
+          "oklch(55% 0.0281 168.80)",
+          "oklch(65% 0.0253 168.80)",
+          "oklch(80% 0.0167 168.80)",
+          "oklch(95% 0.0044 168.80)"
         ]
       },
-      "shell-ink": {
-        "role": "neutral",
-        "displayName": "Shell ink",
-        "canonical": "#f1f7ee",
+      "green": {
+        "role": "primary",
+        "displayName": "Green",
+        "canonical": "#16865e",
         "tonalRamp": [
-          "oklch(15% 0.0061 134.90)",
-          "oklch(25% 0.0095 134.90)",
-          "oklch(35% 0.0120 134.90)",
-          "oklch(45% 0.0133 134.90)",
-          "oklch(55% 0.0133 134.90)",
-          "oklch(65% 0.0120 134.90)",
-          "oklch(80% 0.0079 134.90)",
-          "oklch(95% 0.0021 134.90)"
+          "oklch(15% 0.0363 162.72)",
+          "oklch(25% 0.0566 162.72)",
+          "oklch(35% 0.0713 162.72)",
+          "oklch(45% 0.0790 162.72)",
+          "oklch(55% 0.0790 162.72)",
+          "oklch(65% 0.0713 162.72)",
+          "oklch(80% 0.0470 162.72)",
+          "oklch(95% 0.0125 162.72)"
         ]
       },
-      "shell-muted": {
-        "role": "neutral",
-        "displayName": "Shell muted",
-        "canonical": "#c0d7c7",
+      "green-dark": {
+        "role": "primary",
+        "displayName": "Green dark",
+        "canonical": "#116c4b",
         "tonalRamp": [
-          "oklch(15% 0.0150 155.29)",
-          "oklch(25% 0.0233 155.29)",
-          "oklch(35% 0.0294 155.29)",
-          "oklch(45% 0.0326 155.29)",
-          "oklch(55% 0.0326 155.29)",
-          "oklch(65% 0.0294 155.29)",
-          "oklch(80% 0.0194 155.29)",
-          "oklch(95% 0.0052 155.29)"
+          "oklch(15% 0.0363 162.58)",
+          "oklch(25% 0.0566 162.58)",
+          "oklch(35% 0.0713 162.58)",
+          "oklch(45% 0.0790 162.58)",
+          "oklch(55% 0.0790 162.58)",
+          "oklch(65% 0.0713 162.58)",
+          "oklch(80% 0.0470 162.58)",
+          "oklch(95% 0.0125 162.58)"
         ]
       },
-      "shell-rule": {
+      "lav": {
         "role": "neutral",
-        "displayName": "Shell rule",
-        "canonical": "#47705b",
+        "displayName": "Lav",
+        "canonical": "#eee9ff",
         "tonalRamp": [
-          "oklch(15% 0.0260 161.13)",
-          "oklch(25% 0.0405 161.13)",
-          "oklch(35% 0.0510 161.13)",
-          "oklch(45% 0.0565 161.13)",
-          "oklch(55% 0.0565 161.13)",
-          "oklch(65% 0.0510 161.13)",
-          "oklch(80% 0.0336 161.13)",
-          "oklch(95% 0.0089 161.13)"
+          "oklch(15% 0.0136 296.23)",
+          "oklch(25% 0.0211 296.23)",
+          "oklch(35% 0.0266 296.23)",
+          "oklch(45% 0.0295 296.23)",
+          "oklch(55% 0.0295 296.23)",
+          "oklch(65% 0.0266 296.23)",
+          "oklch(80% 0.0176 296.23)",
+          "oklch(95% 0.0047 296.23)"
         ]
       },
-      "error": {
+      "amber": {
         "role": "neutral",
-        "displayName": "Error",
-        "canonical": "#9e3531",
+        "displayName": "Amber",
+        "canonical": "#fff0d8",
         "tonalRamp": [
-          "oklch(15% 0.0363 26.01)",
-          "oklch(25% 0.0566 26.01)",
-          "oklch(35% 0.0713 26.01)",
-          "oklch(45% 0.0790 26.01)",
-          "oklch(55% 0.0790 26.01)",
-          "oklch(65% 0.0713 26.01)",
-          "oklch(80% 0.0470 26.01)",
-          "oklch(95% 0.0125 26.01)"
+          "oklch(15% 0.0161 79.69)",
+          "oklch(25% 0.0251 79.69)",
+          "oklch(35% 0.0316 79.69)",
+          "oklch(45% 0.0350 79.69)",
+          "oklch(55% 0.0350 79.69)",
+          "oklch(65% 0.0316 79.69)",
+          "oklch(80% 0.0208 79.69)",
+          "oklch(95% 0.0055 79.69)"
         ]
       },
-      "error-paper": {
+      "red": {
         "role": "neutral",
-        "displayName": "Error paper",
-        "canonical": "#fbeeea",
+        "displayName": "Red",
+        "canonical": "#c84d4d",
         "tonalRamp": [
-          "oklch(15% 0.0069 37.88)",
-          "oklch(25% 0.0107 37.88)",
-          "oklch(35% 0.0135 37.88)",
-          "oklch(45% 0.0149 37.88)",
-          "oklch(55% 0.0149 37.88)",
-          "oklch(65% 0.0135 37.88)",
-          "oklch(80% 0.0089 37.88)",
-          "oklch(95% 0.0024 37.88)"
+          "oklch(15% 0.0363 23.30)",
+          "oklch(25% 0.0566 23.30)",
+          "oklch(35% 0.0713 23.30)",
+          "oklch(45% 0.0790 23.30)",
+          "oklch(55% 0.0790 23.30)",
+          "oklch(65% 0.0713 23.30)",
+          "oklch(80% 0.0470 23.30)",
+          "oklch(95% 0.0125 23.30)"
         ]
       },
-      "success": {
-        "role": "neutral",
-        "displayName": "Success",
-        "canonical": "#176449",
+      "primary-fill": {
+        "role": "primary",
+        "displayName": "Primary fill",
+        "canonical": "#13875e",
         "tonalRamp": [
-          "oklch(15% 0.0363 164.72)",
-          "oklch(25% 0.0566 164.72)",
-          "oklch(35% 0.0713 164.72)",
-          "oklch(45% 0.0790 164.72)",
-          "oklch(55% 0.0790 164.72)",
-          "oklch(65% 0.0713 164.72)",
-          "oklch(80% 0.0470 164.72)",
-          "oklch(95% 0.0125 164.72)"
+          "oklch(15% 0.0363 162.51)",
+          "oklch(25% 0.0566 162.51)",
+          "oklch(35% 0.0713 162.51)",
+          "oklch(45% 0.0790 162.51)",
+          "oklch(55% 0.0790 162.51)",
+          "oklch(65% 0.0713 162.51)",
+          "oklch(80% 0.0470 162.51)",
+          "oklch(95% 0.0125 162.51)"
         ]
       },
-      "success-paper": {
-        "role": "neutral",
-        "displayName": "Success paper",
-        "canonical": "#e0eee5",
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Primary hover",
+        "canonical": "#0f704e",
         "tonalRamp": [
-          "oklch(15% 0.0087 157.86)",
-          "oklch(25% 0.0135 157.86)",
-          "oklch(35% 0.0170 157.86)",
-          "oklch(45% 0.0188 157.86)",
-          "oklch(55% 0.0188 157.86)",
-          "oklch(65% 0.0170 157.86)",
-          "oklch(80% 0.0112 157.86)",
-          "oklch(95% 0.0030 157.86)"
+          "oklch(15% 0.0363 162.88)",
+          "oklch(25% 0.0566 162.88)",
+          "oklch(35% 0.0713 162.88)",
+          "oklch(45% 0.0790 162.88)",
+          "oklch(55% 0.0790 162.88)",
+          "oklch(65% 0.0713 162.88)",
+          "oklch(80% 0.0470 162.88)",
+          "oklch(95% 0.0125 162.88)"
         ]
       },
-      "info-paper": {
+      "nav-selected": {
         "role": "neutral",
-        "displayName": "Info paper",
-        "canonical": "#e9efea",
+        "displayName": "Nav selected",
+        "canonical": "#23364e",
         "tonalRamp": [
-          "oklch(15% 0.0042 150.69)",
-          "oklch(25% 0.0065 150.69)",
-          "oklch(35% 0.0082 150.69)",
-          "oklch(45% 0.0091 150.69)",
-          "oklch(55% 0.0091 150.69)",
-          "oklch(65% 0.0082 150.69)",
-          "oklch(80% 0.0054 150.69)",
-          "oklch(95% 0.0014 150.69)"
+          "oklch(15% 0.0225 254.75)",
+          "oklch(25% 0.0350 254.75)",
+          "oklch(35% 0.0441 254.75)",
+          "oklch(45% 0.0489 254.75)",
+          "oklch(55% 0.0489 254.75)",
+          "oklch(65% 0.0441 254.75)",
+          "oklch(80% 0.0291 254.75)",
+          "oklch(95% 0.0077 254.75)"
+        ]
+      },
+      "nav-label": {
+        "role": "neutral",
+        "displayName": "Nav label",
+        "canonical": "#9cabc0",
+        "tonalRamp": [
+          "oklch(15% 0.0158 256.78)",
+          "oklch(25% 0.0246 256.78)",
+          "oklch(35% 0.0310 256.78)",
+          "oklch(45% 0.0344 256.78)",
+          "oklch(55% 0.0344 256.78)",
+          "oklch(65% 0.0310 256.78)",
+          "oklch(80% 0.0205 256.78)",
+          "oklch(95% 0.0054 256.78)"
+        ]
+      },
+      "outline-ink": {
+        "role": "neutral",
+        "displayName": "Outline ink",
+        "canonical": "#40516a",
+        "tonalRamp": [
+          "oklch(15% 0.0213 257.91)",
+          "oklch(25% 0.0331 257.91)",
+          "oklch(35% 0.0418 257.91)",
+          "oklch(45% 0.0463 257.91)",
+          "oklch(55% 0.0463 257.91)",
+          "oklch(65% 0.0418 257.91)",
+          "oklch(80% 0.0276 257.91)",
+          "oklch(95% 0.0073 257.91)"
+        ]
+      },
+      "confirmed-bg": {
+        "role": "neutral",
+        "displayName": "Confirmed background",
+        "canonical": "#e9f7ef",
+        "tonalRamp": [
+          "oklch(15% 0.005 160)",
+          "oklch(25% 0.01 160)",
+          "oklch(35% 0.015 160)",
+          "oklch(45% 0.02 160)",
+          "oklch(55% 0.02 160)",
+          "oklch(65% 0.015 160)",
+          "oklch(80% 0.01 160)",
+          "oklch(95% 0.005 160)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Page headings."
+        "purpose": "Observed effective navy restoration type role."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section headings."
-      },
-      "title": {
-        "displayName": "Title",
-        "purpose": "Doctor names and component headings."
+        "purpose": "Observed effective navy restoration type role."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Content and form entry."
+        "purpose": "Observed effective navy restoration type role."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Compact filter labels."
+        "purpose": "Observed effective navy restoration type role."
       },
       "supporting": {
         "displayName": "Supporting",
-        "purpose": "Supporting metadata and help."
+        "purpose": "Observed effective navy restoration type role."
       }
     },
     "shadows": [
       {
-        "name": "menu",
-        "value": "0 12px 32px #18372e24",
-        "purpose": "Time-zone dropdown only."
+        "name": "shadow",
+        "value": "0 12px 32px rgba(28,43,65,.055)",
+        "purpose": "Restored card hover, notification panel and update toast."
       }
     ],
     "motion": [
       {
-        "name": "dur-micro",
-        "value": "120ms",
-        "purpose": "Button press response."
+        "name": "duration",
+        "value": "180ms",
+        "purpose": "Update-toast entrance."
       },
       {
-        "name": "dur-short",
-        "value": "220ms",
-        "purpose": "Dropdown state changes."
-      },
-      {
-        "name": "ease-out",
-        "value": "cubic-bezier(.16, 1, .3, 1)",
-        "purpose": "Shared state easing."
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Toast arrival curve."
       }
     ],
     "breakpoints": [
       {
-        "name": "phone",
-        "value": "40rem"
+        "name": "small-phone",
+        "value": "640px"
       },
       {
-        "name": "compact-shell",
-        "value": "60rem"
+        "name": "mobile-navigation",
+        "value": "960px"
       },
       {
-        "name": "compact-gutters",
-        "value": "75rem"
-      },
-      {
-        "name": "stack-booking",
-        "value": "80rem"
+        "name": "compact-desktop",
+        "value": "1100px"
       }
     ]
   },
   "components": [
     {
-      "name": "Primary button",
+      "name": "Primary action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Filled action with progress and press feedback.",
-      "html": "<button class=\"ds-primary\" type=\"button\">Save availability</button>",
-      "css": ".ds-primary{font-family:var(--font-body);font-size:var(--text-md);display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:var(--space-sm) var(--space-20);border:1px solid var(--color-accent);border-radius:var(--radius-input);font-weight:600;line-height:1.4;cursor:pointer;transition:transform var(--dur-micro) var(--ease-out);background:var(--color-accent);color:var(--color-accent-ink)}.ds-primary:hover{background:var(--color-accent-deep);border-color:var(--color-accent-deep)}.ds-primary:focus-visible{outline:3px solid var(--color-focus);outline-offset:3px;}.ds-primary:active{transform:translateY(1px)}.ds-primary:disabled{opacity:.6;cursor:not-allowed;transform:none}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}.ds-primary:active{transform:none}}"
+      "description": "Restored button with readable label and target.",
+      "html": "<button class=\"ds-button-primary\" type=\"button\">Save availability</button>",
+      "css": ".ds-button-primary{font-family:var(--font-body);font-size:15px;display:inline-flex;justify-content:center;align-items:center;gap:17px;min-height:44px;padding:10px 16px;border:0;border-radius:9px;font-weight:700;cursor:pointer;background:#13875e;color:var(--white)}.ds-button-primary:hover{background:#0f704e}.ds-button-primary:focus-visible{outline:3px solid var(--green);outline-offset:3px;}.ds-button-primary:active{transform:translateY(1px)}.ds-button-primary:disabled{opacity:.65;cursor:wait}@media(prefers-reduced-motion:reduce){.ds-button-primary:active{transform:none}}"
     },
     {
-      "name": "Outline button",
+      "name": "Dark action",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Restored button with readable label and target.",
+      "html": "<button class=\"ds-button-dark\" type=\"button\">View day</button>",
+      "css": ".ds-button-dark{font-family:var(--font-body);font-size:15px;display:inline-flex;justify-content:center;align-items:center;gap:17px;min-height:44px;padding:10px 16px;border:0;border-radius:9px;font-weight:700;cursor:pointer;background:var(--navy);color:var(--white)}.ds-button-dark:hover{background:#263a56}.ds-button-dark:focus-visible{outline:3px solid var(--green);outline-offset:3px;}.ds-button-dark:active{transform:translateY(1px)}.ds-button-dark:disabled{opacity:.65;cursor:wait}@media(prefers-reduced-motion:reduce){.ds-button-dark:active{transform:none}}"
+    },
+    {
+      "name": "Outline action",
       "kind": "button",
       "refersTo": "button-outline",
-      "description": "Secondary action using the same control geometry.",
-      "html": "<button class=\"ds-outline\" type=\"button\">View day</button>",
-      "css": ".ds-outline{font-family:var(--font-body);font-size:var(--text-md);display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:var(--space-sm) var(--space-20);border:1px solid var(--color-accent);border-radius:var(--radius-input);font-weight:600;line-height:1.4;cursor:pointer;transition:transform var(--dur-micro) var(--ease-out);background:transparent;color:var(--color-accent)}.ds-outline:hover{background:var(--color-paper-3)}.ds-outline:focus-visible{outline:3px solid var(--color-focus);outline-offset:3px;}.ds-outline:active{transform:translateY(1px)}.ds-outline:disabled{opacity:.6;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-outline{transition:none}.ds-outline:active{transform:none}}"
+      "description": "Restored button with readable label and target.",
+      "html": "<button class=\"ds-button-outline\" type=\"button\">View day</button>",
+      "css": ".ds-button-outline{font-family:var(--font-body);font-size:15px;display:inline-flex;justify-content:center;align-items:center;gap:17px;min-height:44px;padding:10px 16px;border:0;border-radius:9px;font-weight:700;cursor:pointer;border:1px solid #dfe5eb;background:var(--white);color:#40516a}.ds-button-outline:hover{background:var(--white)}.ds-button-outline:focus-visible{outline:3px solid var(--green);outline-offset:3px;}.ds-button-outline:active{transform:translateY(1px)}.ds-button-outline:disabled{opacity:.65;cursor:wait}@media(prefers-reduced-motion:reduce){.ds-button-outline:active{transform:none}}"
     },
     {
-      "name": "Labeled field",
+      "name": "Labeled input",
       "kind": "input",
       "refersTo": "input",
-      "description": "Persistent label and visible input edge.",
-      "html": "<label class=\"ds-label\">Doctor name<input class=\"ds-input\" placeholder=\"Doctor name\"></label>",
-      "css": ".ds-label{font-family:var(--font-body);font-size:var(--text-md);display:grid;gap:var(--space-xs);color:var(--color-ink);font-weight:600}.ds-input{font-family:var(--font-body);font-size:var(--text-md);box-sizing:border-box;width:100%;min-width:0;min-height:48px;padding:var(--space-sm);border:1px solid var(--color-input-edge);border-radius:var(--radius-input);background:var(--color-surface);color:var(--color-ink)}.ds-input::placeholder{color:var(--color-muted);opacity:1}.ds-input:focus-visible{outline:3px solid var(--color-focus);outline-offset:3px;}.ds-input:user-invalid{border-color:var(--color-error)}"
+      "description": "Native form entry with readable task text.",
+      "html": "<label class=\"ds-label\">Email address<input class=\"ds-input\" type=\"email\" placeholder=\"you@example.com\"></label>",
+      "css": ".ds-label{font-family:var(--font-body);font-size:15px;display:flex;flex-direction:column;gap:7px;font-weight:700;color:var(--muted)}.ds-input{font:inherit;font-size:16px;box-sizing:border-box;min-height:46px;padding:11px 12px;border:1px solid #e3e8ee;border-radius:9px;background:var(--white);color:#34445a}.ds-input::placeholder{color:var(--muted);opacity:1}.ds-input:focus-visible{outline:3px solid var(--green);outline-offset:3px;}.ds-input:focus{border-color:#88cfae;box-shadow:0 0 0 3px #eaf7ef}"
     },
     {
-      "name": "Role navigation",
+      "name": "Selected workspace link",
       "kind": "nav",
       "refersTo": "nav-active",
-      "description": "Current location on the forest shell.",
-      "html": "<nav class=\"ds-shell\" aria-label=\"Workspace\"><a class=\"ds-nav\" href=\"#\" aria-current=\"page\"><svg aria-hidden=\"true\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M7 3v4m10-4v4M3 11h18\"/></svg>Overview</a></nav>",
-      "css": ".ds-shell{background:var(--color-shell);padding:var(--space-md)}.ds-nav{font-family:var(--font-body);font-size:var(--text-md);display:flex;align-items:center;gap:var(--space-sm);min-height:48px;box-sizing:border-box;padding:var(--space-sm);border-radius:var(--radius-input);color:var(--color-shell-muted);text-decoration:none}.ds-nav:hover,.ds-nav[aria-current]{background:var(--color-shell-2);color:var(--color-shell-ink)}.ds-nav[aria-current]{box-shadow:inset 0 0 0 1px var(--color-shell-rule)}.ds-nav:focus-visible{outline:3px solid var(--color-shell-ink);outline-offset:3px}.ds-nav:active{opacity:.8}"
+      "description": "Restored active item; application tracks path and hash.",
+      "html": "<nav class=\"ds-shell\" aria-label=\"Workspace\"><a class=\"ds-nav\" href=\"#\" aria-current=\"page\">Working hours</a></nav>",
+      "css": ".ds-shell{background:var(--navy);padding:20px}.ds-nav{font-family:var(--font-body);font-size:16px;min-height:48px;display:flex;align-items:center;padding:0 13px;border-radius:10px;text-decoration:none;color:#9cabc0}.ds-nav:hover{background:#1d2d45;color:var(--white)}.ds-nav[aria-current]{background:#23364e;color:var(--white);box-shadow:inset 3px 0 #61d5a2}.ds-nav:focus-visible{outline:3px solid var(--mint);outline-offset:3px}"
+    },
+    {
+      "name": "Settings card",
+      "kind": "card",
+      "refersTo": "work-card",
+      "description": "Original bordered rounded settings surface.",
+      "html": "<section class=\"ds-card\"><h2 class=\"ds-title\">Working hours</h2><p class=\"ds-copy\">Set weekly working ranges in your local time.</p></section>",
+      "css": ".ds-card{background:var(--white);border:1px solid var(--line);border-radius:15px;padding:20px}.ds-title{font-family:var(--font-heading);font-size:23px;letter-spacing:-.7px;margin:7px 0 4px}.ds-copy{font-family:var(--font-body);font-size:15px;line-height:1.6;color:var(--muted)}"
     },
     {
       "name": "Confirmed status",
-      "kind": "custom",
+      "kind": "chip",
       "refersTo": "status-confirmed",
-      "description": "Text carries the state without a pill container.",
-      "html": "<span class=\"ds-status\">Confirmed</span>",
-      "css": ".ds-status{font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;color:var(--color-success);font-variant-numeric:tabular-nums}"
-    },
-    {
-      "name": "Shared work surface",
-      "kind": "card",
-      "refersTo": "work-surface",
-      "description": "A flat settings surface, with dividers between jobs.",
-      "html": "<section class=\"ds-work\"><h2 class=\"ds-work-title\">Working hours</h2><p class=\"ds-work-copy\">Set weekly working ranges in your local time.</p></section>",
-      "css": ".ds-work{background:var(--color-surface);color:var(--color-ink);padding:var(--space-32);border-radius:var(--radius-card)}.ds-work-title{font-family:var(--font-display);font-size:var(--text-section);font-weight:500;line-height:1.2;letter-spacing:var(--tracking-display);margin:0 0 var(--space-xs)}.ds-work-copy{font-family:var(--font-body);font-size:var(--text-md);line-height:1.5;color:var(--color-muted);margin:0}"
-    },
-    {
-      "name": "Paired local times",
-      "kind": "custom",
-      "refersTo": "work-surface",
-      "description": "Time hierarchy without fabricated appointment data.",
-      "html": "<div class=\"ds-slot\"><strong class=\"ds-slot-time\">Your local time</strong><small class=\"ds-slot-zone\">Doctor time and time zone</small></div>",
-      "css": ".ds-slot{padding:var(--space-20) 0;border-bottom:1px solid var(--color-rule)}.ds-slot-time{display:block;font-family:var(--font-display);font-size:var(--text-lg);font-weight:500;font-variant-numeric:tabular-nums;color:var(--color-ink)}.ds-slot-zone{display:block;font-family:var(--font-body);font-size:var(--text-xs);color:var(--color-muted);overflow-wrap:anywhere;margin-top:var(--space-xs)}"
+      "description": "Original confirmed pill; hidden by the original small-phone appointment layout.",
+      "html": "<span class=\"ds-confirmed\">Confirmed</span>",
+      "css": ".ds-confirmed{font-family:var(--font-body);font-size:14px;font-weight:700;display:inline-block;border-radius:20px;padding:6px 9px;color:var(--green);background:#e9f7ef}"
     }
   ],
   "narrative": {
-    "northStar": "The care register",
-    "overview": "SlotZero uses a forest-green shell and pale green work areas to frame a readable scheduling tool. Names, dates and paired local times carry the hierarchy. The identity is expressed through type, restrained color and aligned rows rather than decorative medical imagery.\n\nThe system is light-theme only. Flat work surfaces, visible field boundaries and compact summaries support repeated tasks; account screens reuse the same palette and type at a larger scale. Product truth remains in PRODUCT.md and the canonical project documents. This file records the built visual system, whose implementation source is slotzero-mvp/static/tokens.css, base.css and styles.css; it does not introduce a second token implementation.",
+    "northStar": "The restored navy workspace",
+    "overview": "On 2026-11-01 the user explicitly rejected the green care-register redesign and requested the previous navy/card design back, with larger readable fonts and targeted functional updates. That reversal supersedes the former green direction and its surface contract. Preserve the restored compositions rather than treating the earlier redesign as authority.\n\nThe implementation source is slotzero-mvp/static/styles.css, restored from 2df0d49 with its readable font floor, followed by enhancements.css for local fonts, readability and new widgets. This document extracts that effective cascade. Frontmatter entries matching root variables keep their existing names; component-specific literal colors remain descriptive snapshots, not a competing CSS token implementation. This is a light-theme site, with a dark navy navigation rail rather than a dark-mode option.",
     "keyCharacteristics": [
-      "Forest shell, light work surfaces and one deep-green action color.",
-      "Lexend headings with readable Source Sans 3 controls and content.",
-      "Aligned appointment rows with explicit time-zone names.",
-      "Flat containers, clear boundaries and state-driven motion."
+      "Navy navigation, pale gray work background and white rounded cards.",
+      "Green primary actions with lavender and amber accents retained in the original cards.",
+      "Local Lexend headings and Source Sans 3 body content.",
+      "Existing screen compositions plus focused navigation, schedule and update widgets."
     ],
     "rules": [
       {
-        "name": "The State Has Words Rule",
-        "body": "Confirmation, failure and selection remain understandable without color.",
+        "name": "The Restored Identity Rule",
+        "body": "Keep the navy/card compositions; targeted usability changes must not reintroduce the rejected green visual world.",
         "section": "colors"
       },
       {
-        "name": "The Reading First Rule",
-        "body": "Preserve complete names, dates and zone names; wrap supporting text rather than silently clipping it.",
+        "name": "The Readable Task Rule",
+        "body": "Keep entry fields at 16px and preserve readable appointment, zone and schedule details; do not shrink task text to fit decoration.",
         "section": "typography"
-      },
-      {
-        "name": "The Flat Workbench Rule",
-        "body": "Use surface tone and dividers for work areas; reserve the floating shadow for an overlay.",
-        "section": "elevation"
       }
     ],
     "dos": [
-      "Do reuse the shipped CSS tokens and the same input and button variants on every screen.",
-      "Do keep full time-zone labels and paired appointment times readable at mobile widths.",
-      "Do retain visible labels, immediate focus indicators and meaningful status text.",
-      "Do use light surfaces, green-black navigation and flat ruled work areas consistently."
+      "Do preserve the user's restored navy shell, card grid and screen compositions.",
+      "Do layer narrow readability and widget styles through enhancements.css after styles.css.",
+      "Do use the locally served Lexend and Source Sans 3 fonts with reliable fallbacks.",
+      "Do keep split shifts, update state and calendar setup status explicit and truthful."
     ],
     "donts": [
-      "Don't introduce a competing palette, font system or unimplemented dark theme.",
-      "Don't replace live appointment data with invented metrics, testimonials or mock bookings.",
-      "Don't use tracked-cap eyebrows, decorative glyph icons or nested cards.",
-      "Don't hide content behind entrance effects or remove state feedback for reduced-motion users."
+      "Don't reapply the rejected green care-register direction or its flat-row layouts.",
+      "Don't describe manual calendar export as automatic live synchronization.",
+      "Don't claim complete contrast compliance or live OAuth verification from source inspection.",
+      "Don't let UI changes alter the validated scheduling rules or booking authority."
     ]
   }
 }

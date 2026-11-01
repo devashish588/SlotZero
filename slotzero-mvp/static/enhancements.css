@@ -1,0 +1,49 @@
+/* Targeted additions to the restored navy SlotZero design. */
+@font-face{font-family:Lexend;src:url('fonts/lexend-latin-variable.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Source Sans 3';src:url('fonts/source-sans-3-variable.woff2') format('woff2');font-weight:200 900;font-display:swap}
+:root{--font-body:'Source Sans 3','Segoe UI',sans-serif;--font-heading:Lexend,'Segoe UI',sans-serif;--muted:#526278;--line:#dce3eb;--duration:180ms;--ease:cubic-bezier(.16,1,.3,1)}
+html,body{overflow-x:clip}body{font-family:var(--font-body);font-size:16px;line-height:1.5}
+h1,h2,h3,.brand-name,.brand-mark,.stat-card strong,.slot-times strong,.appointment-date-block strong{font-family:var(--font-heading)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.sidebar a:focus-visible,.menu-toggle:focus-visible{outline-color:var(--mint)}
+.skip-link{position:fixed;top:8px;left:8px;z-index:100;padding:12px 16px;background:var(--white);transform:translateY(-180%)}.skip-link:focus{transform:translateY(0)}
+.nav-item{font-size:16px;min-height:48px;height:auto}.sidebar-section-label,.eyebrow{font-size:13px}.brand-name small{font-size:13px;letter-spacing:.7px}
+.profile-copy strong,.security-note strong{font-size:14px}.profile-copy small,.security-note small{font-size:13px;color:#b0bfd0}
+.breadcrumb{font-size:14px}.timezone-chip{font-size:13px}.icon-button{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center}.icon-button:active,.button:active{transform:translateY(1px)}
+.button{font-size:15px;min-height:44px;padding:10px 16px}.muted,.auth-subtitle,.doctor-info p,.profile-bio{font-size:15px;line-height:1.6}
+.welcome-row h1,.reschedule-header h1{font-size:32px;letter-spacing:-1px}.section-heading h2,.settings-title h2{font-size:23px}
+.stat-card small,.date-pill small,.doctor-card-bottom small,.profile-duration small{font-size:13px;letter-spacing:.3px;color:var(--muted)}
+.stat-card strong{font-size:28px}.stat-card span{font-size:13px;color:var(--muted)}.stat-card .stat-zone{font-size:19px}.stat-card .unit{font-family:var(--font-body)!important;font-size:14px!important}
+.doctor-info h3,.empty-state h3{font-size:19px}.specialty,.doctor-meta,.doctor-card-bottom strong,.availability-badge{font-size:14px}.doctor-card-bottom strong{overflow-wrap:anywhere}
+.filter-field input,.form-stack input,.form-stack select,.form-stack textarea,.date-selector input,.inline-date-form input{font-size:16px;min-height:46px}.filter-field{min-height:46px}.filter-field input::placeholder{color:var(--muted)}
+.form-stack label,.date-selector label{font-size:15px}.field-help,.small-copy{font-size:13px}.form-stack textarea{line-height:1.7}
+.slot-times strong{font-size:19px}.slot-times span,.slot-times small,.history-copy small{font-size:13px;color:var(--muted)}.slot-book{font-size:14px}
+.timezone-note strong,.timezone-note small,.booking-side-card li,.booking-side-card>small{font-size:14px}.booking-side-card h3{font-size:19px}
+.appointment-main strong{font-size:16px}.appointment-main span,.appointment-main small,.appointment-date-block small{font-size:14px}.appointment-date-block strong{font-size:18px}.status-pill,.text-action,.result-count{font-size:14px}.text-action{min-height:44px;display:inline-flex;align-items:center}
+.empty-inline strong,.history-copy strong,.blocked-item strong{font-size:15px}.empty-inline small,.empty-state p,.blocked-item small{font-size:14px;color:var(--muted)}
+.current-booking span,.current-booking small{font-size:13px}.current-booking strong{font-size:17px;overflow-wrap:anywhere}.app-footer{font-size:13px}
+.timezone-trigger,.timezone-option{min-height:44px;font-size:15px}.zone-name{font-size:14px}.zone-label,.timezone-saving,.timezone-message{font-size:13px}.timezone-dropdown{z-index:15}
+.auth-visual-copy h1{font-size:58px;letter-spacing:-2px}.auth-visual-copy p{font-size:17px}.auth-card-wrap h2{font-size:34px}.auth-switch{font-size:15px}.auth-foot,.auth-legal{font-size:13px;letter-spacing:.3px}
+.demo-head strong{font-size:16px}.demo-head small,.demo-grid strong,.demo-grid small,.copy-demo,.demo-foot{font-size:13px}.copy-demo{min-height:44px}.role-tag{font-size:13px}.demo-grid>div{min-width:0;overflow-wrap:anywhere}
+.notice{font-size:15px}.notice>span{flex-shrink:0}
+.form-stack input::placeholder,.form-stack textarea::placeholder{color:var(--muted);opacity:1}
+.notice.error>span{color:#9c3636}.notice.info>span{color:#345b7c}.slot-book{color:var(--green-dark)}
+.notice.success>span{color:var(--green-dark)}
+.text-action{min-width:44px}
+.brand-name small{font-family:var(--font-body)}
+.notification-panel{max-height:min(70dvh,calc(100dvh - 190px))}
+.brand-name small{font-size:13px}.eyebrow{letter-spacing:.7px}.doctor-card-bottom .button{font-size:14px}.settings-title .muted{font-size:15px}.auth-visual-copy .eyebrow{font-size:13px}
+.inline-date-form{align-items:flex-end}.inline-date-form label{display:grid;gap:6px;font-size:13px;color:var(--muted)}
+.sidebar-heading{display:flex;align-items:center;justify-content:space-between}.menu-toggle{display:none}
+.notification-control{position:relative}.notification-bell{position:relative;border:1px solid var(--line);border-radius:10px;background:var(--white)}
+#notification-count{position:absolute;right:-3px;top:-5px;min-width:20px;padding:0 5px;background:var(--red);color:var(--white);font-size:13px;border-radius:12px}
+.notification-panel{position:absolute;right:0;top:calc(100% + 12px);width:min(400px,calc(100vw - 32px));max-height:70dvh;overflow-y:auto;padding:20px;background:var(--white);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);z-index:25;color:var(--ink)}
+.notification-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.notification-heading h2{font-size:19px}.notification-panel p{font-size:14px;color:var(--muted);margin:12px 0}.notification-panel ul{list-style:none;padding:0;margin:0}.notification-panel li{padding:12px 0;border-top:1px solid var(--line);font-size:15px}.notification-panel time{display:block;font-size:13px;color:var(--muted);margin-top:4px}.notification-panel .notification-help{font-size:13px}
+.update-toast{position:fixed;right:24px;top:84px;z-index:30;display:flex;align-items:center;gap:16px;max-width:min(440px,calc(100% - 32px));padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:var(--white);color:var(--ink);box-shadow:var(--shadow);animation:toast-in var(--duration) var(--ease)}.update-toast p{font-size:15px;margin:0}.update-toast .icon-button{flex-shrink:0;color:var(--ink)}
+@keyframes toast-in{from{opacity:.5;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.weekly-day{min-width:0;border:0;border-bottom:1px solid var(--line);padding:12px 0;margin:0}.weekly-day legend{font-size:15px;font-weight:700;padding:0}.weekly-ranges{display:grid;gap:8px}.weekly-range{display:flex;align-items:center;gap:8px}.weekly-range label{flex:1;min-width:0;font-size:13px}.weekly-range input{width:100%;font-size:16px}.weekly-range .icon-button{align-self:flex-end;color:var(--red);font-size:22px}.weekly-day .text-action{border:0;background:transparent;padding:8px 0;color:var(--green);font-size:14px}.calendar-settings{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}.calendar-settings h3{font-size:19px;margin:0 0 12px}.calendar-settings p{font-size:14px;color:var(--muted);line-height:1.6}.calendar-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:12px 0}
+[hidden]{display:none!important}
+@media(max-width:1100px){.settings-grid{grid-template-columns:minmax(0,1fr)}.weekly-range input{min-width:0}}
+@media(max-width:960px){.sidebar{position:relative;width:100%;padding:16px 24px}.sidebar .brand-name{display:block}.sidebar .brand{justify-content:flex-start}.sidebar-section-label{display:block;margin:20px 12px 12px}.sidebar .nav-item,.sidebar .nav-item:not(.active){display:flex;justify-content:flex-start;padding:12px}.sidebar-bottom{display:none}.main-area{margin-left:0}.menu-toggle{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid #53677f;border-radius:8px;background:var(--navy-2);color:var(--white)}.sidebar nav{padding-top:8px}.notification-panel{position:fixed;right:16px;top:150px}.auth-visual-copy h1{font-size:48px}}
+@media(max-width:640px){.sidebar{display:flex;padding:12px 16px}.brand-name{font-size:20px}.topbar{min-height:72px;height:auto;gap:8px;flex-wrap:wrap;padding:12px 16px}.topbar-right{width:100%;justify-content:flex-end}.breadcrumb{font-size:13px}.timezone-chip{margin-right:auto;padding:6px 8px}.welcome-row h1{font-size:28px}.section-heading h2{font-size:22px}.stats-grid{gap:8px}.stat-card{padding:12px 8px}.stat-card small{font-size:13px}.stat-card strong{font-size:23px}.stat-card span{font-size:13px}.stat-card .stat-zone{font-size:17px}.auth-visual-copy h1{font-size:42px}.auth-card-wrap h2{font-size:30px}.update-toast{top:180px;right:16px;padding:12px 16px}.notification-panel{top:176px}.doctor-profile-hero{flex-wrap:wrap}.appointment-date-block{flex-basis:60px}.appointment-date-block strong{font-size:16px}.doctor-appointment-row .appointment-date-block strong{white-space:nowrap}.doctor-appointment-row .appointment-main{flex-basis:calc(100% - 84px)}.two-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.update-toast{animation:none}.button:active,.icon-button:active{transform:none}.spinner{animation:none}html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important}}

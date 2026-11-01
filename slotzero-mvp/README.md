@@ -57,7 +57,7 @@ The new doctor starts with no working hours and must configure their schedule af
 ### Doctor
 
 1. Sign in with a seeded doctor account.
-2. Configure the initially empty weekly schedule in the doctor's own timezone. Use one line per weekday, for example `Mon: 09:00-12:00,13:00-17:00`.
+2. Configure the initially empty weekly schedule using each day's time pickers. Add multiple ranges for split shifts and leave a day empty for time off. The text-editor fallback still accepts `Mon: 09:00-12:00,13:00-17:00`.
 3. Choose an appointment length of 15, 30, or 60 minutes.
 4. Add blocked periods for breaks, leave, or other unavailability.
 5. Review appointments for the selected local date.
@@ -112,7 +112,8 @@ cross-invocation data persistence.
 ## Known MVP limitations / next production steps
 
 - SQLite is appropriate for a single-instance demo and serializes all writes. For multi-instance production, migrate to PostgreSQL and use a database exclusion constraint on `(doctor_id, tstzrange(start_utc, end_utc, '[)'))` for confirmed appointments, in addition to transactions.
-- No email/SMS reminders, calendar sync, payments, doctor verification workflow, or admin UI; these are intentionally out of scope for the challenge MVP.
+- In-app appointment updates use a bell and pop-ups while the page is open; read state is browser-local. No email/SMS or closed-tab push is implemented.
+- Optional manual Google Calendar export requires operator configuration and the doctor's consent. See the [Google setup guide](../docs/operations/GOOGLE-CALENDAR-SETUP.md). Google does not change SlotZero availability; automatic/two-way sync, payments, doctor verification and an admin UI remain out of scope.
 - Doctor accounts are seeded and demo passwords are static until changed by the operator.
 - The two-hour cutoff is applied to both cancellation and rescheduling as a conservative MVP policy; the brief explicitly specifies the cancellation cutoff, while the reschedule cutoff is an implementation assumption.
 - There is no automated appointment-completion status transition. Past appointments remain in confirmed history but do not appear in the patient's upcoming list.

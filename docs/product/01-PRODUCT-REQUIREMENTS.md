@@ -28,7 +28,7 @@ A clinic currently coordinates appointments manually. This creates risks of two 
 - Public doctor registration or automated doctor verification.
 - Payments, insurance, prescriptions or medical records.
 - Video consultations, messaging or chatbot.
-- Email/SMS reminders or calendar-provider integration.
+- Email/SMS reminders or calendar-provider integration were outside the original challenge MVP. The user's 2026-11-01 extension authorizes in-app update notifications and optional manual Google Calendar export; see ADR-013. Email/SMS, automatic/two-way calendar availability sync and payments remain outside this extension.
 - Multi-clinic tenancy or multiple locations per doctor.
 - Real patient or business data.
 

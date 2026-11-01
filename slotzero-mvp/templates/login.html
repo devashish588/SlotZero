@@ -2,21 +2,22 @@
 {% block title %}Sign in{% endblock %}
 {% block auth_content %}
 <div class="auth-card-wrap">
-  <h1>Sign in to SlotZero.</h1>
+  <div class="eyebrow"><span></span> WELCOME BACK</div>
+  <h2>Sign in to<br>SlotZero<span class="text-accent">.</span></h2>
   <p class="auth-subtitle">Your schedule is right where you left it.</p>
   <form method="post" action="/login" class="form-stack">
     <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="username" required autofocus></label>
     <label>Password<input type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required></label>
-    <button class="button primary full" type="submit">Sign in</button>
+    <button class="button primary full" type="submit">Sign in <span>→</span></button>
   </form>
   <div class="auth-switch">New to SlotZero? <a href="/register">Create a patient account</a></div>
   <div class="demo-panel">
-    <div class="demo-head"><strong>Explore the demo</strong><small>Use one of the sample accounts below</small></div>
+    <div class="demo-head"><span class="demo-spark">✳</span><div><strong>Explore the demo</strong><small>Use one of the sample accounts below</small></div></div>
     <div class="demo-grid">
-      <div><span class="role-tag doctor-tag">Doctor</span><strong>meera@slotzero.demo</strong><small>Password: Meera@123</small><button class="copy-demo" type="button" aria-label="Use doctor demo account" data-copy-email="meera@slotzero.demo" data-copy-password="Meera@123">Use account</button></div>
-      <div><span class="role-tag patient-tag">Patient</span><strong>asha@slotzero.demo</strong><small>Password: Asha@123</small><button class="copy-demo" type="button" aria-label="Use patient demo account" data-copy-email="asha@slotzero.demo" data-copy-password="Asha@123">Use account</button></div>
+      <div><span class="role-tag doctor-tag">DOCTOR</span><strong>meera@slotzero.demo</strong><small>Password: Meera@123</small><button class="copy-demo" data-copy-email="meera@slotzero.demo" data-copy-password="Meera@123">Use account ↗</button></div>
+      <div><span class="role-tag patient-tag">PATIENT</span><strong>asha@slotzero.demo</strong><small>Password: Asha@123</small><button class="copy-demo" data-copy-email="asha@slotzero.demo" data-copy-password="Asha@123">Use account ↗</button></div>
     </div>
-    <p class="demo-foot">Also available:<span>alex@slotzero.demo / Alex@123</span><span>sam@slotzero.demo / Sam@123</span></p>
+    <p class="demo-foot">Also available: alex@slotzero.demo / Alex@123 · sam@slotzero.demo / Sam@123</p>
   </div>
 </div>
 {% endblock %}

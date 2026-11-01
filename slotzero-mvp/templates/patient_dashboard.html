@@ -2,12 +2,12 @@
 {% block title %}Find a doctor{% endblock %}
 {% block breadcrumb %}Discover doctors{% endblock %}
 {% block content %}
-<section class="welcome-row" aria-labelledby="patient-heading">
-  <div><h1 id="patient-heading">Good day, {{ user.full_name.split(' ')[0] }}.</h1><p class="muted">Find a doctor and choose a time that works for you.</p></div>
-  <div class="date-pill"><div><small>Your local time</small><div class="timezone-selector" id="timezone-selector">
-    <button type="button" class="timezone-trigger" id="timezone-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="timezone-dropdown" aria-label="Change time zone">
+<section class="welcome-row">
+  <div><div class="eyebrow"><span></span> YOUR CARE, IN SYNC</div><h1>Good day, {{ user.full_name.split(' ')[0] }}<span class="text-accent">.</span></h1><p class="muted">Find a doctor and choose a time that works for you.</p></div>
+  <div class="date-pill"><span class="date-icon">◷</span><div><small>YOUR LOCAL TIME</small><div class="timezone-selector" id="timezone-selector">
+    <button type="button" class="timezone-trigger" id="timezone-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Change time zone">
       <span id="timezone-display">{{ user.timezone }}</span>
-      <span class="dropdown-arrow" aria-hidden="true">⌄</span>
+      <span class="dropdown-arrow">▼</span>
     </button>
     <div class="timezone-dropdown" id="timezone-dropdown" role="listbox" aria-label="Supported time zones" hidden>
       {% for zone in allowed_zones %}
@@ -17,41 +17,41 @@
       </button>
       {% endfor %}
     </div>
-    <div class="timezone-saving" id="timezone-saving" role="status" hidden><span class="spinner" aria-hidden="true"></span>Saving…</div>
+    <div class="timezone-saving" id="timezone-saving" role="status" hidden><span class="spinner"></span>Saving…</div>
     <div class="timezone-message" id="timezone-message" role="status" hidden></div>
   </div></div></div>
 </section>
-<section class="stats-grid patient-stats" aria-label="Your care at a glance">
-  <div class="stat-card"><div><small>Active appointments</small><strong>{{ total_appointments }}</strong><span>Across your care schedule</span></div></div>
-  <div class="stat-card"><div><small>Doctors to explore</small><strong>{{ doctors|length }}</strong><span>Available in SlotZero</span></div></div>
-  <div class="stat-card"><div><small>Your time zone</small><strong class="stat-zone">{{ user.timezone.split('/')[-1].replace('_',' ') }}</strong><span>Appointment times adapt to you</span></div></div>
+<section class="stats-grid patient-stats">
+  <div class="stat-card"><div class="stat-icon mint">▦</div><div><small>ACTIVE APPOINTMENTS</small><strong>{{ total_appointments }}</strong><span>Across your care schedule</span></div></div>
+  <div class="stat-card"><div class="stat-icon lavender">⌖</div><div><small>DOCTORS TO EXPLORE</small><strong>{{ doctors|length }}</strong><span>Available in SlotZero</span></div></div>
+  <div class="stat-card"><div class="stat-icon amber">◷</div><div><small>YOUR TIME ZONE</small><strong class="stat-zone">{{ user.timezone.split('/')[-1].replace('_',' ') }}</strong><span>Appointment times adapt to you</span></div></div>
 </section>
 <section class="section-block" id="doctors">
-  <div class="section-heading"><div><h2>Care that fits your day</h2><p class="muted">Explore doctors and see availability for your calendar date in {{ user.timezone }}.</p></div><span class="result-count">{{ doctors|length }} doctors</span></div>
+  <div class="section-heading"><div><div class="eyebrow"><span></span> FIND YOUR DOCTOR</div><h2>Care that fits your day</h2><p class="muted">Explore doctors and see availability for your calendar date in {{ user.timezone }}.</p></div><span class="result-count">{{ doctors|length }} doctors</span></div>
   <form class="filter-bar" method="get" action="/patient/dashboard">
-    <label class="filter-field"><span class="filter-label">Doctor name</span><input name="name" value="{{ name }}" placeholder="Search by name"></label>
-    <label class="filter-field"><span class="filter-label">Specialization</span><input name="specialization" value="{{ specialization }}" placeholder="Search by specialty"></label>
-    <label class="filter-field date-filter"><span class="filter-label">Availability date</span><input type="date" name="availability_date" value="{{ selected_day }}" aria-label="Availability date in {{ user.timezone }}"></label>
-    <button class="button dark" type="submit">Search</button>
+    <label class="filter-field"><span>⌕</span><input name="name" value="{{ name }}" placeholder="Doctor name"></label>
+    <label class="filter-field"><span>✳</span><input name="specialization" value="{{ specialization }}" placeholder="Specialization"></label>
+    <label class="filter-field date-filter"><span>▦</span><input type="date" name="availability_date" value="{{ selected_day }}" aria-label="Availability date in {{ user.timezone }}"></label>
+    <button class="button dark" type="submit">Search <span>→</span></button>
     {% if name or specialization or request.query_params.get('availability_date') %}<a class="clear-link" href="/patient/dashboard">Clear</a>{% endif %}
   </form>
   {% if doctors %}
-    <div class="doctor-grid doctor-directory">
+    <div class="doctor-grid">
       {% for doctor in doctors %}
       <article class="doctor-card">
-        <div class="doctor-card-top"><div class="doctor-avatar avatar-{{ loop.index0 % 4 }}" aria-hidden="true">{{ doctor.full_name.split(' ')[1][:1] if doctor.full_name.split('|')|length > 1 else doctor.full_name.split(' ')[1][:1] }}</div></div>
+        <div class="doctor-card-top"><div class="doctor-avatar avatar-{{ loop.index0 % 4 }}">{{ doctor.full_name.split(' ')[1][:1] if doctor.full_name.split('|')|length > 1 else doctor.full_name.split(' ')[1][:1] }}</div><span class="availability-badge"><i></i>{% if doctor.available_count %}{{ doctor.available_count }} slots{% elif doctor.has_schedule %}No open slots{% else %}Setup pending{% endif %}</span></div>
         <div class="doctor-info"><h3>{{ doctor.full_name }}</h3><span class="specialty">{{ doctor.specialization }}</span><p>{{ doctor.bio }}</p></div>
-        <div class="doctor-meta"><span>{{ doctor.consultation_minutes }} min consultation</span><span>{{ doctor.timezone.split('/')[-1].replace('_',' ') }}</span><span class="availability-badge">{% if doctor.available_count %}{{ doctor.available_count }} slots{% elif doctor.has_schedule %}No open slots{% else %}Setup pending{% endif %}</span></div>
-        <div class="doctor-card-bottom"><div><small>Next available</small><strong>{{ doctor.next_slot or ('Check another date' if doctor.has_schedule else 'Schedule not configured') }}</strong></div><a class="button outline" href="/doctors/{{ doctor.id }}?date={{ doctor.slot_date }}" aria-label="View slots for {{ doctor.full_name }}">View slots</a></div>
+        <div class="doctor-meta"><span>◷ {{ doctor.consultation_minutes }} min</span><span>⌖ {{ doctor.timezone.split('/')[-1].replace('_',' ') }}</span></div>
+        <div class="doctor-card-bottom"><div><small>NEXT AVAILABLE</small><strong>{{ doctor.next_slot or ('Check another date' if doctor.has_schedule else 'Schedule not configured') }}</strong></div><a class="button outline" href="/doctors/{{ doctor.id }}?date={{ doctor.slot_date }}">View slots <span>→</span></a></div>
       </article>
       {% endfor %}
     </div>
   {% else %}
-    <div class="empty-state"><h3>No doctors match your search</h3><p>Try another name, specialization or date.</p><a href="/patient/dashboard" class="button outline">Clear filters</a></div>
+    <div class="empty-state"><div class="empty-icon">⌕</div><h3>No doctors match your search</h3><p>Try another name, specialization or date.</p><a href="/patient/dashboard" class="button outline">Clear filters</a></div>
   {% endif %}
 </section>
 <section class="section-block appointments-section" id="appointments">
-  <div class="section-heading"><div><h2>Your next appointments</h2><p class="muted">All times below are shown in {{ user.timezone }}.</p></div><span class="result-count">{{ upcoming|length }} upcoming</span></div>
+  <div class="section-heading"><div><div class="eyebrow"><span></span> COMING UP</div><h2>Your next appointments</h2><p class="muted">All times below are shown in {{ user.timezone }}.</p></div><span class="result-count">{{ upcoming|length }} upcoming</span></div>
   {% if upcoming %}
     <div class="appointment-list">
       {% for appointment in upcoming %}
@@ -64,17 +64,17 @@
       {% endfor %}
     </div>
   {% else %}
-    <div class="empty-inline"><div><strong>No upcoming appointments</strong><small>Your confirmed bookings will appear here.</small></div></div>
+    <div class="empty-inline"><span>◷</span><div><strong>No upcoming appointments</strong><small>Your confirmed bookings will appear here.</small></div></div>
   {% endif %}
 </section>
 <section class="section-block history-section" id="history">
-  <div class="section-heading"><div><h2>Appointment history</h2><p class="muted">A record of bookings and changes to your appointments.</p></div></div>
+  <div class="section-heading"><div><div class="eyebrow"><span></span> ACTIVITY LOG</div><h2>Appointment history</h2><p class="muted">A record of bookings and changes to your appointments.</p></div></div>
   {% if history %}
     <div class="history-list">
       {% for event in history %}
-      <div class="history-row"><div class="history-copy"><strong>{{ event.action|title }}: {{ event.doctor_name }}</strong><small>{{ event.created_display }} by {{ event.actor_name }}</small>{% if event.old_display or event.new_display %}<small>{% if event.old_display %}From {{ event.old_display }}{% endif %}{% if event.old_display and event.new_display %}; {% endif %}{% if event.new_display %}to {{ event.new_display }}{% endif %}</small>{% endif %}</div></div>
+      <div class="history-row"><span class="history-dot {{ event.action }}"></span><div class="history-copy"><strong>{{ event.action|title }} · {{ event.doctor_name }}</strong><small>{{ event.created_display }} · {{ event.actor_name }}</small>{% if event.old_display or event.new_display %}<small>{% if event.old_display %}From {{ event.old_display }}{% endif %}{% if event.old_display and event.new_display %} → {% endif %}{% if event.new_display %}To {{ event.new_display }}{% endif %}</small>{% endif %}</div></div>
       {% endfor %}
     </div>
-  {% else %}<div class="empty-inline"><div><strong>No activity yet</strong><small>Booking and appointment changes will be recorded here.</small></div></div>{% endif %}
+  {% else %}<div class="empty-inline"><span>↺</span><div><strong>No activity yet</strong><small>Booking and appointment changes will be recorded here.</small></div></div>{% endif %}
 </section>
 {% endblock %}

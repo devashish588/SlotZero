@@ -9,8 +9,8 @@ This document is intentionally explicit. A limitation is not a failure if it is 
 3. **Static demo credentials:** demo accounts use static fictional passwords until changed/removed by an operator.
 4. **No password reset/change UI:** account recovery is not implemented.
 5. **No login rate limiting:** brute-force controls are not implemented.
-6. **No email/SMS notifications:** confirmation is shown in the application only.
-7. **No calendar integration or payments:** intentionally out of scope.
+6. **In-app notifications only:** a role-scoped bell and dismissible updates poll appointment events every 15 seconds while the page is open. Read state is browser-local; no email, SMS, background OS push or closed-tab delivery exists.
+7. **Optional manual Google export; no payments:** the user authorized a separate app-created Google calendar export on 2026-11-01. OAuth configuration and live account verification remain pending. It does not import personal-calendar busy times, change availability or sync automatically; see [setup](GOOGLE-CALENDAR-SETUP.md).
 8. **No appointment completion state:** past confirmed appointments remain in history; no scheduled status transition marks them completed.
 9. **No audit retention policy:** appointment event history is retained without a defined expiry process.
 10. **No deep health/readiness check:** `/health` only returns a basic service response.

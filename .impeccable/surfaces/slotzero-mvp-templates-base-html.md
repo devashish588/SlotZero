@@ -2,25 +2,21 @@
 version: 1
 slug: "slotzero-mvp-templates-base-html"
 primary_target: "slotzero-mvp/templates/base.html"
-related_targets: ["slotzero-mvp/templates/login.html","slotzero-mvp/templates/register.html","slotzero-mvp/templates/patient_dashboard.html","slotzero-mvp/templates/doctor_dashboard.html","slotzero-mvp/templates/doctor_detail.html","slotzero-mvp/templates/reschedule.html","slotzero-mvp/static/styles.css"]
+related_targets: ["slotzero-mvp/templates/login.html","slotzero-mvp/templates/register.html","slotzero-mvp/templates/patient_dashboard.html","slotzero-mvp/templates/doctor_dashboard.html","slotzero-mvp/templates/doctor_detail.html","slotzero-mvp/templates/reschedule.html","slotzero-mvp/static/styles.css","slotzero-mvp/static/enhancements.css"]
 ---
 
-# SlotZero scheduling surfaces
+# SlotZero restoration and targeted updates
 
-Mode: Operate. Scope: six screens and shared shell. Audience and scheduling rules confirmed by user; source of truth PRODUCT.md and docs/INDEX.md. Code-led; actual demo data is the visual material, no fictional proof.
+Mode: Operate. On 2026-11-01 the user rejected the prior green redesign and explicitly requested restoration of the navy/card design from 2df0d49, retaining local readable fonts and targeted usability/features. This replaces the earlier direction contract; its seed and flat green visual rules no longer govern these screens.
 
-## Direction contract
+## Current scope
 
+Preserve the six existing screens and their original card compositions. Improve readable task text, active path/hash navigation and access to every role link on mobile. Add a day-by-day native-time weekly editor with split shifts and text fallback; a role-scoped notification bell/feed with dismissible update toast; and optional doctor-authorized manual calendar export with honest unconfigured state.
 
+## Boundaries
 
-THESIS: Make the real two-zone appointment list the memorable object; distinguish care selection from booking commitment without adding marketing sections.
+PRODUCT.md and the canonical project documents retain product and scheduling authority. DESIGN.md records the effective navy styles.css plus enhancements.css cascade. No stock imagery, invented metrics, new marketing sections or visual-world workshop is required. Calendar configuration and live OAuth are separate operational gates; manual export never changes SlotZero availability.
 
-OWN-WORLD: Green-black navigation, pale green ground, clear work surfaces, one deep-green action, Lexend headings and Source Sans 3 content. Restrained edge/radius language; time data aligns and wraps without abbreviation.
+## Verification status
 
-STORY: Sign in, find a doctor, choose a doctor-local date, compare both zones and confirm. Doctors see the daily agenda before adjusting availability.
-
-FIRST VIEWPORT: Existing role navigation at left, readable identity and zone at top, compact greeting/stat strip, filters immediately above the directory. On booking pages profile, date and actual slots lead. Account pages put a clear form beside the existing brand statement and supported-zone content. Signature interaction: local/doctor time pairing remains visible through booking and replacement selection; pending submission indicates state without hiding content.
-
-FORM: Working care register; code-led app scope, selected under the user's delegated direction choice. `seed:56c3d1f7b144a19c`.
-
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+Record tests and rendered findings in the task verification report. This brief makes no screenshot, accessibility-pass or live calendar claim; implementation remains subject to independent review.

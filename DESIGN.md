@@ -1,201 +1,194 @@
 ---
 name: SlotZero
-description: A readable care register for appointments across time zones.
+description: Restored navy scheduling workspace with readable local fonts and targeted
+  enhancements.
 colors:
-  accent: "#176449"
-  accent-deep: "#104d38"
-  accent-ink: "#f6fff8"
-  focus: "#147354"
-  paper: "#f3f6f2"
-  paper-2: "#e9efea"
-  paper-3: "#dbe9df"
-  surface: "#fdfefd"
-  ink: "#18372e"
-  ink-2: "#304d42"
-  muted: "#52665c"
-  rule: "#cfdbd2"
-  input-edge: "#778d7f"
-  shell: "#153e32"
-  shell-2: "#255342"
-  shell-ink: "#f1f7ee"
-  shell-muted: "#c0d7c7"
-  shell-rule: "#47705b"
-  error: "#9e3531"
-  error-paper: "#fbeeea"
-  success: "#176449"
-  success-paper: "#e0eee5"
-  info-paper: "#e9efea"
+  navy: '#101b2d'
+  navy-2: '#17263d'
+  ink: '#18263a'
+  muted: '#526278'
+  line: '#dce3eb'
+  paper: '#f6f8fb'
+  white: '#fff'
+  mint: '#ddf5eb'
+  green: '#16865e'
+  green-dark: '#116c4b'
+  lav: '#eee9ff'
+  amber: '#fff0d8'
+  red: '#c84d4d'
+  primary-fill: '#13875e'
+  primary-hover: '#0f704e'
+  nav-selected: '#23364e'
+  nav-label: '#9cabc0'
+  outline-ink: '#40516a'
+  confirmed-bg: '#e9f7ef'
 typography:
   display:
-    fontFamily: "Lexend, Segoe UI, sans-serif"
-    fontSize: "2rem"
-    fontWeight: 500
+    fontFamily: Lexend, Segoe UI, sans-serif
+    fontSize: 32px
+    fontWeight: 800
     lineHeight: 1.2
-    letterSpacing: "-0.025em"
+    letterSpacing: -1px
   headline:
-    fontFamily: "Lexend, Segoe UI, sans-serif"
-    fontSize: "1.5rem"
-    fontWeight: 500
-    lineHeight: 1.2
-    letterSpacing: "-0.025em"
-  title:
-    fontFamily: "Lexend, Segoe UI, sans-serif"
-    fontSize: "1.125rem"
-    fontWeight: 500
-    lineHeight: 1.2
-    letterSpacing: "-0.025em"
+    fontFamily: Lexend, Segoe UI, sans-serif
+    fontSize: 23px
+    fontWeight: 700
+    letterSpacing: -0.7px
   body:
-    fontFamily: "Source Sans 3, Segoe UI, sans-serif"
-    fontSize: "1rem"
+    fontFamily: Source Sans 3, Segoe UI, sans-serif
+    fontSize: 16px
     fontWeight: 400
     lineHeight: 1.5
   label:
-    fontFamily: "Source Sans 3, Segoe UI, sans-serif"
-    fontSize: "0.9375rem"
-    fontWeight: 600
-    lineHeight: 1.5
+    fontFamily: Source Sans 3, Segoe UI, sans-serif
+    fontSize: 15px
+    fontWeight: 700
   supporting:
-    fontFamily: "Source Sans 3, Segoe UI, sans-serif"
-    fontSize: "0.875rem"
+    fontFamily: Source Sans 3, Segoe UI, sans-serif
+    fontSize: 13px
     fontWeight: 400
-    lineHeight: 1.5
 rounded:
-  input: "8px"
-  card: "12px"
+  button: 9px
+  nav: 10px
+  stat-card: 14px
+  panel: 15px
+  status: 20px
 spacing:
-  3xs: "2px"
-  2xs: "4px"
-  xs: "8px"
-  sm: "12px"
-  md: "16px"
-  lg: "24px"
-  xl: "40px"
-  2xl: "64px"
-  3xl: "96px"
-  space-20: "20px"
-  space-32: "32px"
-  space-48: "48px"
+  '8': 8px
+  '12': 12px
+  '16': 16px
+  '20': 20px
+  '24': 24px
 components:
   button-primary:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.accent-ink}"
-    rounded: "{rounded.input}"
-    padding: "12px 20px"
-  button-primary-hover:
-    backgroundColor: "{colors.accent-deep}"
-    textColor: "{colors.accent-ink}"
+    backgroundColor: '{colors.primary-fill}'
+    textColor: '{colors.white}'
+    rounded: '{rounded.button}'
+    padding: 10px 16px
+  button-dark:
+    backgroundColor: '{colors.navy}'
+    textColor: '{colors.white}'
+    rounded: '{rounded.button}'
+    padding: 10px 16px
   button-outline:
-    backgroundColor: "transparent"
-    textColor: "{colors.accent}"
-    rounded: "{rounded.input}"
-    padding: "12px 20px"
+    backgroundColor: '{colors.white}'
+    textColor: '{colors.outline-ink}'
+    rounded: '{rounded.button}'
+    padding: 10px 16px
   input:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.input}"
-    padding: "12px"
+    backgroundColor: '{colors.white}'
+    textColor: '#34445a'
+    rounded: '{rounded.button}'
+    padding: 11px 12px
   nav-active:
-    backgroundColor: "{colors.shell-2}"
-    textColor: "{colors.shell-ink}"
-    rounded: "{rounded.input}"
-    padding: "12px"
+    backgroundColor: '{colors.nav-selected}'
+    textColor: '{colors.white}'
+    rounded: '{rounded.nav}'
+  work-card:
+    backgroundColor: '{colors.white}'
+    rounded: '{rounded.panel}'
+    padding: 20px
   status-confirmed:
-    textColor: "{colors.success}"
-  work-surface:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.card}"
-    padding: "32px"
+    backgroundColor: '{colors.confirmed-bg}'
+    textColor: '{colors.green}'
+    rounded: '{rounded.status}'
+    padding: 6px 9px
 ---
 
 # Design System: SlotZero
 
 ## Overview
 
-**Creative North Star: "The care register"**
+**Creative North Star: "The restored navy workspace"**
 
-SlotZero uses a forest-green shell and pale green work areas to frame a readable scheduling tool. Names, dates and paired local times carry the hierarchy. The identity is expressed through type, restrained color and aligned rows rather than decorative medical imagery.
+On 2026-11-01 the user explicitly rejected the green care-register redesign and requested the previous navy/card design back, with larger readable fonts and targeted functional updates. That reversal supersedes the former green direction and its surface contract. Preserve the restored compositions rather than treating the earlier redesign as authority.
 
-The system is light-theme only. Flat work surfaces, visible field boundaries and compact summaries support repeated tasks; account screens reuse the same palette and type at a larger scale. Product truth remains in PRODUCT.md and the canonical project documents. This file records the built visual system, whose implementation source is slotzero-mvp/static/tokens.css, base.css and styles.css; it does not introduce a second token implementation.
+The implementation source is slotzero-mvp/static/styles.css, restored from 2df0d49 with its readable font floor, followed by enhancements.css for local fonts, readability and new widgets. This document extracts that effective cascade. Frontmatter entries matching root variables keep their existing names; component-specific literal colors remain descriptive snapshots, not a competing CSS token implementation. This is a light-theme site, with a dark navy navigation rail rather than a dark-mode option.
 
 **Key Characteristics:**
-- Forest shell, light work surfaces and one deep-green action color.
-- Lexend headings with readable Source Sans 3 controls and content.
-- Aligned appointment rows with explicit time-zone names.
-- Flat containers, clear boundaries and state-driven motion.
+- Navy navigation, pale gray work background and white rounded cards.
+- Green primary actions with lavender and amber accents retained in the original cards.
+- Local Lexend headings and Source Sans 3 body content.
+- Existing screen compositions plus focused navigation, schedule and update widgets.
 
 ## Colors
 
 ### Primary
 
-Deep care green marks primary actions, meaningful availability and active selections. Its deeper companion is the hover state; pale ink remains readable on the filled action. Focus has its own green token and switches to shell ink on dark navigation.
+Navy and its second shade establish the shell. Green and green-dark support actions, time slots and focus; mint provides a light complementary surface. The primary filled button retains its original component-specific green fill and deeper hover. These are extracted separately from the general green variable because the source still distinguishes them.
+
+### Secondary
+
+Lavender and amber remain the original supporting card accents. The rejected redesign's single-accent restriction no longer applies.
 
 ### Neutral
 
-Forest shell and its lighter selected surface establish navigation. Pale paper, secondary paper and green-tinted paper separate the document ground, quiet feedback and current-booking summaries. Near-white surfaces hold forms. Green-black ink, secondary ink and muted text distinguish information hierarchy; rule and input-edge tokens keep dividers quieter than interactive boundaries.
+Ink, muted, line, paper and white keep their source names. The enhancement stylesheet overrides muted and line with darker effective values; the frontmatter records those final values. Active navigation uses the original selected-navy literal, white text and mint inset marker. Supporting literal colors remain in the legacy source, so future work should inspect the effective cascade before assuming every color is tokenized.
 
 ### Semantic states
 
-Success, error and information pair foreground and background tokens. State text always carries the meaning; color is additional evidence. No independent secondary brand accent is implemented.
+Red identifies destructive actions and notification counts. Existing success, information and error notices retain their original distinct tinted backgrounds and text. Meaning is also present in text and controls rather than color alone.
 
-**The State Has Words Rule.** Confirmation, failure and selection remain understandable without color.
+**The Restored Identity Rule.** Keep the navy/card compositions; targeted usability changes must not reintroduce the rejected green visual world.
 
 ## Typography
 
-Lexend is the heading face; Source Sans 3 carries body text, labels, buttons and supporting information. Both are locally served variable WOFF2 fonts with Segoe UI and sans-serif fallbacks and font-display swap. License and source details live beside the fonts.
+Local variable Lexend replaces Manrope for headings and selected emphasized values; local Source Sans 3 replaces DM Sans for body copy and controls. Both load from the app's WOFF2 files with matching font preloads, declared variable weight ranges and font-display swap. No external font stylesheet is loaded. Segoe UI and sans-serif are fallback families. Textarea schedule syntax retains its original monospace treatment.
 
-The frontmatter records the base hierarchy. Headings use one weight, balanced wrapping and modest negative tracking; body text keeps natural tracking. Supporting text is 14px, while normal text and form entry are 16px. Forms commonly use 600-weight labels at the body size; filter labels use the smaller label role. Numerals in times, summaries and appointment metadata are tabular. Explanatory copy is capped around 65–70 characters where the layout permits.
+Normal body text and form entry are 16px. Main workspace headings are 32px, section headings 23px, card headings and slot times commonly 19px, and action labels 15px. Supporting working content generally uses 13â€“15px. Mobile workspace headings reduce to 28px and sections to 22px. Existing bold weights are preserved: large workspace headings use 800; button and form labels use 700. The account headline remains a larger Lexend treatment, not a new landing-page composition.
 
-The account-screen brand statement is the deliberate larger exception: Lexend 500 at 56px with 1.1 line height, reduced to 48px below 80rem and absent on narrow account layouts. Main greetings reduce to 28px on phones; section headings reduce to 22px. The brand strapline is 12px, not the body-text baseline.
+The readability update raises explicit font-size declarations below 13px to 13px across the restored and enhancement stylesheets, including branding and summary labels. Supporting content retains that 13px floor while body and entry text remain larger. This source-level rule is not a completed accessibility audit.
 
-**The Reading First Rule.** Preserve complete names, dates and zone names; wrap supporting text rather than silently clipping it.
+**The Readable Task Rule.** Keep entry fields at 16px and preserve readable appointment, zone and schedule details; do not shrink task text to fit decoration.
 
 ## Layout
 
-The desktop shell retains a fixed 232px role-navigation rail. The main content container caps at 1280px including its gutters; extra desktop width increases outer space rather than stretching the reading measure. Gutters are 40px, reduced to 24px below 75rem and 16px below 40rem. The spacing steps in the frontmatter are the implemented shared scale; 20px, 32px and 48px remain named intermediate steps.
+The restored desktop shell uses a 252px fixed rail, reduced to 220px below 1100px. Main content caps at 1160px including its padding, with original 42px desktop gutters, 28px below 1100px and 16px on small phones. Doctor discovery remains a card grid, summaries remain cards, booking remains a main card beside its guidance card, and appointments/history retain their original layouts. Settings stack to one column below 1100px.
 
-Doctor discovery uses broad ruled rows under its filters, appointments use an agenda, and settings share a two-column surface. Booking keeps the actual slot list next to a 256px guidance column; at 80rem the guidance moves below. Slot lists use two shrinkable tracks and become one track on phones. Settings stack below 60rem.
+The targeted mobile navigation fix takes effect at 960px: the rail becomes a full-width header with an expandable menu exposing every role link. It replaces the old icon-only or hidden navigation behavior. Navigation selection follows both path and hash, including back/forward changes. At 640px the header wraps, content grids stack and the original mobile card arrangements remain.
 
-Below 60rem the rail becomes a full-width header with a keyboard-operable menu. Below 40rem filters and metadata reflow, action targets remain usable, and summary rows compact without dropping their values. Account pages use a split composition on desktop and a single form column below 60rem. These are responsive arrangements of the existing screens, not alternate products.
+Notifications anchor to the bell on desktop and use a viewport-positioned panel on compact layouts. Update toasts are dismissible and constrained to the viewport. The visual weekly editor uses one fieldset per weekday, with paired start/end inputs and controls for split shifts; it serializes to the existing schedule text contract. The original text editor remains the fallback.
 
 ## Elevation & Depth
 
-Tonal layering and rules provide depth at rest. The time-zone dropdown alone uses the menu shadow (0 12px 32px #18372e24). Navigation selection uses an inset one-pixel outline rather than elevation. Containers do not acquire ambient shadows on hover.
-
-**The Flat Workbench Rule.** Use surface tone and dividers for work areas; reserve the floating shadow for an overlay.
+The restored system uses bordered rounded cards with small soft shadows. Doctor cards lift slightly on hover; notifications and toasts use the existing shared shadow. The root shadow is 0 12px 32px rgba(28,43,65,.055). The translucent sticky topbar and original account background treatment are retained. This is a restoration of the user's design, not the earlier flat-workbench system.
 
 ## Shapes
 
-Controls use gently curved input corners; shared work surfaces use the larger card corners recorded above. Inputs have a one-pixel edge; visible focus has a three-pixel outline and a three-pixel offset. Avatars remain circular. Dividers are one pixel and image-bearing or content grids use shrinkable tracks. Both document axes prevent incidental horizontal overflow through the base stylesheet's horizontal clip rule; responsive checks must still catch clipped content rather than treating that rule as a fix.
+The original corner vocabulary is intentionally varied: buttons and form fields use 9px, navigation 10px, summary cards 14px and principal work cards 15px. Status labels retain their pill shape. New notification surfaces follow the existing rounded-card language rather than defining another shape system. Icon and text actions have a 44px minimum hit target; form entry is at least 46px high in the enhancement layer.
 
 ## Components
 
-### Buttons and inputs
+### Actions and fields
 
-Filled primary and transparent outline buttons share a minimum 48px height, shape, typography and press response. Actual padding is recorded in the frontmatter. Primary hover deepens the green; outline hover uses tinted paper. Compact icon and text actions retain 44px targets. Inputs have a minimum 48px height, persistent labels and readable placeholders. User-invalid fields use the error edge. Disabled or pending buttons show reduced emphasis; busy forms show progress text and suppress repeated submissions.
+Primary green, dark navy and white outline buttons retain their existing variants and original content. Enhancements increase target sizes and text, preserve native validation and add visible keyboard focus. Pending forms show their existing progress text and suppress duplicate submission. The visual weekly-hours inputs use native time fields and retain the server's schedule validation; adding another range expresses a split shift, not a new scheduling model.
 
-### Navigation and statuses
+### Workspace navigation
 
-Navigation is sentence case, with a 48px minimum row, SVG icons and an explicit current-page state. Hover and current selection use the lighter shell tone. Mobile expansion exposes aria-expanded and keeps links available without JavaScript. Confirmed status is compact green text without a surrounding pill; notices use a nonshrinking label beside their message. Errors are focusable alerts, success is polite status, and empty states explain what belongs in the region.
+The selected item reflects the full destination, including working-hours and blocked-time anchors. The mobile menu exposes aria-expanded, keyboard Escape and every role destination. Active markers remain the restored source's visual treatment.
 
-### Work surfaces and paired times
+### Notifications
 
-Settings occupy one near-white surface with a divider between jobs rather than nested cards. Doctor, appointment, block and history rows use rules and spacing. The two-zone slot row puts patient-local time first, doctor time and zone beneath, and a booking action beside it. The reschedule summary keeps the current booking visible before replacement selection. These are live data presentations, not decorative mockups.
+The bell opens a role-scoped appointment-update feed. A count indicates unread activity; Mark all read updates the local read state, and the panel includes loading, empty and error messages. New booking, cancellation and rescheduling events can produce a dismissible status toast. The feed polls every 15 seconds while the page is open. These widgets do not imply email, SMS or push delivery.
 
-### Motion
+### Google Calendar
 
-The 120ms micro duration covers press feedback; the 220ms short duration covers dropdown state. Both use the shared ease-out curve. Press translates by one pixel; the dropdown enters with a four-pixel shift and opacity. The pending spinner rotates linearly over one second. Reduced-motion mode removes press transforms, transitions, spinner rotation and dropdown animation while preserving visible state. No page-load choreography or scroll hijacking is implemented.
+The doctor's settings card contains an optional Google Calendar connection and manual Sync now action. It exports appointments to a dedicated calendar; it is not automatic live sync and does not replace SlotZero availability. Missing OAuth configuration renders an honest disabled-setup explanation. Patient names are not exported. No live Google connection is claimed by this design record.
+
+### Motion and feedback
+
+The targeted toast enters over 180ms with the shared ease-out curve and an eight-pixel upward offset. Button and icon press feedback translates one pixel. Existing hover and loading treatments remain. Reduced-motion rules stop toast and spinner animation, press transforms, smooth scrolling and transitions without removing the final state.
 
 ## Do's and Don'ts
 
 ### Do:
-- Do reuse the shipped CSS tokens and the same input and button variants on every screen.
-- Do keep full time-zone labels and paired appointment times readable at mobile widths.
-- Do retain visible labels, immediate focus indicators and meaningful status text.
-- Do use light surfaces, green-black navigation and flat ruled work areas consistently.
+- Do preserve the user's restored navy shell, card grid and screen compositions.
+- Do layer narrow readability and widget styles through enhancements.css after styles.css.
+- Do use the locally served Lexend and Source Sans 3 fonts with reliable fallbacks.
+- Do keep split shifts, update state and calendar setup status explicit and truthful.
 
 ### Don't:
-- Don't introduce a competing palette, font system or unimplemented dark theme.
-- Don't replace live appointment data with invented metrics, testimonials or mock bookings.
-- Don't use tracked-cap eyebrows, decorative glyph icons or nested cards.
-- Don't hide content behind entrance effects or remove state feedback for reduced-motion users.
+- Don't reapply the rejected green care-register direction or its flat-row layouts.
+- Don't describe manual calendar export as automatic live synchronization.
+- Don't claim complete contrast compliance or live OAuth verification from source inspection.
+- Don't let UI changes alter the validated scheduling rules or booking authority.
