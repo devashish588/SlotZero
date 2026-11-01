@@ -633,6 +633,10 @@ def patient_dashboard(
     except ValueError as exc:
         return flash_redirect("/patient/dashboard", str(exc), "error")
     with read_db() as conn:
+        doctor_choices = conn.execute(
+            "SELECT u.full_name FROM users u JOIN doctors d ON d.user_id=u.id "
+            "WHERE u.role='doctor' ORDER BY u.full_name"
+        ).fetchall()
         query = (
             "SELECT u.id,u.full_name,u.timezone,d.specialization,d.bio,d.consultation_minutes "
             "FROM users u JOIN doctors d ON d.user_id=u.id WHERE u.role='doctor'"
@@ -693,6 +697,7 @@ def patient_dashboard(
     return render(
         request, "patient_dashboard.html", user, doctors=doctors, upcoming=upcoming, history=history,
         total_appointments=total, selected_day=selected_day.isoformat(), name=name,
+            doctor_choices=doctor_choices,
             specialization=specialization, allowed_zones=ALLOWED_ZONES,
     )
 

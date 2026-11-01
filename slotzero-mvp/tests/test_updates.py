@@ -37,6 +37,15 @@ def test_notification_isolation(accounts):
     assert 'refresh_cipher' not in meera.text and 'patient_email' not in meera.text
 
 
+def test_doctor_picker_lists_all_doctors_when_results_are_filtered(accounts):
+    page = accounts['asha'][0].get('/patient/dashboard?name=Dr.%20Meera%20Sharma')
+    assert page.status_code == 200
+    assert '<select name="name" aria-label="Choose a doctor">' in page.text
+    assert '<option value="Dr. Meera Sharma" selected>' in page.text
+    assert '<option value="Dr. Alex Morgan"' in page.text
+    assert len(page.context['doctors']) == 1
+
+
 @pytest.mark.parametrize('action', ['connect', 'sync', 'disconnect'])
 def test_calendar_role_and_csrf(accounts, action):
     url = '/doctor/calendar/' + action

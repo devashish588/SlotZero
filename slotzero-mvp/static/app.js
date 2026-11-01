@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = Array.from(document.querySelectorAll('.nav-item'));
   const updateWorkspace = () => {
+    if (location.pathname === '/doctor/dashboard') {
+      document.body.dataset.workspace = location.hash === '#schedule' ? 'schedule' : location.hash === '#blocks' ? 'blocks' : 'overview';
+      if (location.hash === '#schedule' || location.hash === '#blocks') {
+        requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView({ block: 'start' }));
+      }
+    }
     let selected = navLinks.find(link => {
       const url = new URL(link.href);
       return url.pathname === location.pathname && url.hash === location.hash;

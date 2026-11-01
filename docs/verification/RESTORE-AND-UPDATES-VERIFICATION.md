@@ -59,3 +59,9 @@ The loopback site was restarted at `http://localhost:8000`; health and login ret
 Next permitted action: inspect the running restored UI and configure Google using the supplied guide. Public deployment and additional convenience features remain separate tasks.
 
 The shared docs/INDEX.md also contains concurrent interview-preparation edits. Its working-tree navigation update is preserved but excluded from this task's commit, along with the separately staged interview documents; no unrelated staging is reset or committed.
+
+## Doctor navigation and picker follow-up (2026-11-01)
+
+The patient doctor-name field is now a native dropdown populated from all configured doctors, including when results are filtered. The existing server-side name filter and availability rules remain unchanged. On the doctor dashboard, Working hours and Blocked time now show their respective card independently; Overview still shows the full dashboard. The selected working-hours view uses a two-column week layout on wider screens and one column on narrow screens. No booking or Google sync behavior changed.
+
+Verification: 17 update tests passed; the focused dropdown assertion covers filtered results. The browser workflow passed with zero findings, JavaScript errors or external requests, including new visibility assertions for both workspace links and browser Back. Evidence: `.design-qa/redesign/run-pbihb2ng/`. `node --check` and `git diff --check` passed. Live Google OAuth remains unconfigured and was not tested.
