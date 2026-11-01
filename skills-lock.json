@@ -37,6 +37,12 @@
       "skillPath": "skills/documentation-and-adrs/SKILL.md",
       "computedHash": "85db994c5d2853bbd9ebdb8542e43d92b7229918a0c70126f0e94280ea1ceeec"
     },
+    "hallmark": {
+      "source": "nutlope/hallmark",
+      "sourceType": "github",
+      "skillPath": "skills/hallmark/SKILL.md",
+      "computedHash": "1829aba1cd4a115d91708e266a5b2699f8de219649a5dde762a009f75af08526"
+    },
     "security-and-hardening": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
